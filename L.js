@@ -1,11 +1,10 @@
 var L = {}
 L.styles = function(styleString){
-  let keyValue = styleString.split(':')
-  let key = keyValue[0].trim()
-  keyValue.splice(0,1)
-  let value = keyValue.join('').trim();
-  value = value.replace('//', '://')
-  this.style[key] = value
+  const string = styleString;
+  const colonPosition = string.indexOf(':');
+  const property = string.slice(0, colonPosition)
+  const value = string.slice(colonPosition +1)
+  this.style[property] = value
   
   return this.styles  
 }
