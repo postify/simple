@@ -3,7 +3,7 @@
 #
 #  Author:    Abbas Abdulmalik
 #  Created:	  March 30, 2016
-#  Modified:	Sept 5, 2017 (removed the sudo prefix)
+#  Modified:	Sept 5, 2017 (removed the sudo command)
 #  Original:	push (name may have changed)
 #  Purpose: 	A single command to commit and push
 #          	  local master git repo to remote origin (github)
