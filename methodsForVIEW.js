@@ -51,7 +51,10 @@ c.showShroudHidden = function (){
     .styles
       ('opacity: 0')
       ('visibility: hidden')
-  v.popupHolder.styles('visibility: hidden')
+  v.popupHolder
+    .styles
+      ('opacity: 0') 
+      ('visibility: hidden')  
   setTimeout(function(){
     c.showBtn1Toggle()
     c.showBtn2Toggle()     
@@ -89,6 +92,9 @@ c.showPopupToggle = function(){
 
 c.downloadCurrentImage = function(){
   m.source === v.btnYes ? document.location.assign(m.currentImageUrl) : false
-  v.popupHolder.styles('visibility: hidden')
+  v.popupHolder
+      .styles
+        ('opacity: 0') 
+        ('visibility: hidden')   
   m.popupIsVisible = false
 }
