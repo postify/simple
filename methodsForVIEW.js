@@ -49,8 +49,8 @@ c.showRandomBackgroundColor = function(){
 c.showShroudHidden = function (){
   v.shroud
     .styles
-    ('opacity: 0')
-    ('visibility: hidden')
+      ('opacity: 0')
+      ('visibility: hidden')
   v.popupHolder.styles('visibility: hidden')
   setTimeout(function(){
     c.showBtn1Toggle()
@@ -59,20 +59,31 @@ c.showShroudHidden = function (){
 }
 
 c.showShroudVisible = function(){
-  v.shroud.styles('opacity: 1') 
-  v.shroud.styles('visibility: visible')
+  v.shroud
+    .styles
+      ('opacity: 1') 
+      ('visibility: visible')
 }
 
 c.showPopup = function(){
-  v.popupHolder.styles('visibility: visible')
+  v.popupHolder
+    .styles
+      ('opacity: 0.85') 
+      ('visibility: visible')  
 }
 
 c.showPopupToggle = function(){
   if(m.popupIsVisible){
-    v.popupHolder.styles('visibility: visible')
+    v.popupHolder
+      .styles
+        ('opacity: 0.85') 
+        ('visibility: visible')     
   }
   else if(!m.popupIsVisible){
-    v.popupHolder.styles('visibility: hidden')
+    v.popupHolder
+      .styles
+        ('opacity: 0') 
+        ('visibility: hidden')  
   }
 }
 

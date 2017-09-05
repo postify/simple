@@ -90,6 +90,7 @@ button:hover{
   visibility: hidden;
   overflow: hidden;
 }
+
 #btnHideShroud{
   position: absolute;
   right: 1rem;
@@ -133,5 +134,6 @@ button:hover{
   visibility: hidden;
   font-size: 1.5rem;
   text-shadow: 0 1px 0 white;
+  transition: all 0.75s ease;  
 }
 
