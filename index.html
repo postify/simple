@@ -1,0 +1,42 @@
+<!doctype html>
+<html id="html">
+  <head>
+    <title>Shroud-popup-mvc</title>
+    <meta name="description" content="Abbas' MVC design pattern architecture">
+    <link id="favicon" rel="icon" href="https://cdn.glitch.com/9cf5a72a-0054-4d01-9ab3-788dcb6552e3%2Ffavicon.png?1503586928779" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="prefixfree.js"></script>
+    <script src="L.js"></script>
+    <script src="mvc.js"></script>    
+    <script src="methodsForMODEL.js"></script>
+    <script src="methodsForVIEW.js"></script>  
+  </head>
+  <body id="body">
+    
+    <main id="main">
+      <div id="btnHolder">
+        <button id="btn1" class="btnOut">Image 1</button>
+        <button id="btn2" class="btnOut">Image 2</button>
+      </div>
+    </main>
+    <footer id="info">(info)</footer>
+    <div id="shroud">
+      <div id="messageHolder">
+        <div id="popupHolder">
+          Get Image?<br/>
+          <button id="btnYes" class="btnOut">Yes</button>
+          <button id="btnNo" class="btnOut">No</button>          
+        </div>
+      </div>
+      <div id="btnHideShroud">✗</div>      
+    </div>
+    
+    <!----| NO HTML BELOW THIS LINE  |---->
+    <!----| Let's get this party started: |---->
+    <script>window.addEventListener('DOMContentLoaded', c.initialize)</script>
+  </body>
+</html>

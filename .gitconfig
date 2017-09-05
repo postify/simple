@@ -1,0 +1,5 @@
+[credential]
+	helper = cache --timeout=3600
+[user]
+	email = pitdrop@gmail.com
+	name = postify
