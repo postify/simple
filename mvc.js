@@ -55,7 +55,8 @@ c.updateModel = function(eventObject){
     setShroudHidden:           [v.btnHideShroud === m.source, m.clicked],
     setBtn1Toggle:             [v.btn1 === m.source, m.clicked],
     setBtn2Toggle:             [v.btn2 === m.source, m.clicked],
-    setRandomBackgroundColor:  [v.main === m.source, m.clicked],       
+    setRandomBackgroundColor:  [v.main === m.source, m.clicked],
+    setOfflineStatus:          [m.type === 'online' || m.type === 'offline']
   }
   L.runQualifiedMethods(m.modelMethodQualifiers, c, c.updateView)
 }

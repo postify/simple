@@ -72,3 +72,11 @@ c.setPopupToggle = function(){
   m.popupIsVisible = !m.popupIsVisible
 }
 
+c.setOfflineStatus = function(){
+  if(m.type === 'online'){
+    m.isOnline = true;
+  }
+  else if(m.type === 'offline'){
+    m.isOnline = false;
+  }
+}

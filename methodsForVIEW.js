@@ -98,3 +98,12 @@ c.downloadCurrentImage = function(){
         ('visibility: hidden')   
   m.popupIsVisible = false
 }
+
+c.showOfflineStatus = function(){
+  if(m.isOnline){
+    v.offlineMessage.style.color = "transparent"
+  }
+  else if(!m.isOnline){
+    v.offlineMessage.style.color = "red"
+  }
+}
