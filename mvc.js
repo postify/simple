@@ -33,8 +33,6 @@ m.shroudIsVisible = false
 m.popupIsVisible = false
 m.moveCount = 0
 
-m.modelMethodQualifiers = {}
-
 //specialized states (these vary per application)
 m.debounceTimeMin = 25 //in milliseconds
 m.debounceTimeMax = 500 // milliseconds
@@ -49,7 +47,7 @@ m.currentImageUrl = ''
 //===========| UPDATE MODEL |===========//
 c.updateModel = function(eventObject){
   c.updateBasicStates(eventObject)
-  m.modelMethodQualifiers = {
+  const modelMethodQualifiers = {
     setPopupToggle:            [v.messageHolder === m.source, m.clicked, m.shroudIsVisible],
     setShroudVisible:          [(v.btn1 === m.source || v.btn2 === m.source), m.clicked],
     setShroudHidden:           [v.btnHideShroud === m.source, m.clicked],
@@ -58,14 +56,14 @@ c.updateModel = function(eventObject){
     setRandomBackgroundColor:  [v.main === m.source, m.clicked],
     setOfflineStatus:          [m.type === 'online' || m.type === 'offline']
   }
-  L.runQualifiedMethods(m.modelMethodQualifiers, c, c.updateView)
+  L.runQualifiedMethods(modelMethodQualifiers, c, c.updateView)
 }
 
 //===========| UPDATE VIEW |===========//
 c.updateView = function(){
   const viewMethodQualifiers = {
     showEvents: [true],
-    downloadCurrentImage: [m.source === v.btnYes || m.source === v.btnNo, m.clicked, m.shroudIsVisible] 
+    downloadCurrentImage: [m.source ===  || m.source === v.btnNo, m.clicked, m.shroudIsVisible] 
   }
   L.runQualifiedMethods(viewMethodQualifiers, c, "no callback needed here")
 }
@@ -97,7 +95,8 @@ c.initialize = function(eventObject){
   //make the window object listen to, and handle these event types
   m.eventTypes.forEach(eventType =>{
     window.addEventListener(eventType, c.updateModel, true )
-  })  
+  })
+  
   c.updateModel(eventObject)
 }
 

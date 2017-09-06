@@ -152,5 +152,5 @@ button:hover{
   color: transparent;
   font-size: 2rem;
   font-family: sans-serif;
-  z-index: 10
+  z-index: 3;
 }
