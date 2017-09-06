@@ -91,12 +91,14 @@ c.showPopupToggle = function(){
 }
 
 c.downloadCurrentImage = function(){
-  m.source === v.btnYes ? document.location.assign(m.currentImageUrl) : false
   v.popupHolder
       .styles
         ('opacity: 0') 
         ('visibility: hidden')   
-  m.popupIsVisible = false
+  m.popupIsVisible = false  
+  if(m.source === v.btnYes){
+    document.location.assign(m.currentImageUrl)    
+  }
 }
 
 c.showOfflineStatus = function(){
