@@ -63,7 +63,7 @@ c.updateModel = function(eventObject){
 c.updateView = function(){
   const viewMethodQualifiers = {
     showEvents: [true],
-    downloadCurrentImage: [m.source ===  || m.source === v.btnNo, m.clicked, m.shroudIsVisible] 
+    downloadCurrentImage: [v.btnYes === m.source || v.btnNo === m.source, m.clicked, m.shroudIsVisible] 
   }
   L.runQualifiedMethods(viewMethodQualifiers, c, "no callback needed here")
 }
