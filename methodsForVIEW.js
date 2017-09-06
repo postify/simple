@@ -97,7 +97,9 @@ c.downloadCurrentImage = function(){
         ('visibility: hidden')   
   m.popupIsVisible = false  
   if(m.source === v.btnYes){
-    document.location.assign(m.currentImageUrl)    
+    setTimeout(function(){
+      document.location.assign(m.currentImageUrl)       
+    }, 1)
   }
 }
 
