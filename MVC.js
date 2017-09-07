@@ -70,8 +70,6 @@ c.updateView = function(){
 
 //============| INITIALIZE |================//
 c.initialize = function(eventObject){
-  //get stored states
-  c.getStoredStates()
   
   //attach "id"-ed elements to our view object (after giving window its own id)
   window.id = 'window'
@@ -79,6 +77,9 @@ c.initialize = function(eventObject){
   
   //for apple devices
   L.noPinchZoom()
+  
+  //get stored states
+  c.getStoredStates()  
   
   //list of event types of interest
   m.eventTypes = [
@@ -100,7 +101,7 @@ c.initialize = function(eventObject){
     window.addEventListener(eventType, c.updateModel, true )
   })
   
-  c.updateModel(eventObject)
+  //c.updateModel(eventObject)
 }
 //------------------
 
@@ -108,6 +109,7 @@ c.getStoredStates = function(){
   const storedModel = {}
   if(localStorage.getItem('m')){
     m = JSON.parse(localStorage.getItem('m'))
-    alert(localStorage.getItem('m'))
+    //c.updateModel(m.eventObjects[1])
+    //alert(localStorage.getItem('m'))
   }
 }
