@@ -101,8 +101,19 @@ c.initialize = function(eventObject){
     window.addEventListener(eventType, c.updateModel, true )
   })
   
-  //c.updateModel(eventObject)
-  
-  //alert(Object.keys(m.modelMethodQualifiers))
+  c.restorePriorModel(eventObject)
 }
 
+//--------------
+c.restorePriorModel = function(eventObject){
+  c.updateModel(eventObject)
+  Object.keys(m.modelMethodQualifiers).forEach(methodName =>{
+    let prefix = methodName.slice(0,3)
+    let newMethodName = 'show' + methodName.slice(3)
+    
+    if(prefix === 'set' && object[newMethodName]){
+      object[newFunctionName]()
+    }
+    
+  }) 
+}
