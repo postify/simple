@@ -56,7 +56,8 @@ c.updateModel = function(eventObject){
     setBtn1Toggle:             [v.btn1 === m.source, m.clicked],
     setBtn2Toggle:             [v.btn2 === m.source, m.clicked],
     setRandomBackgroundColor:  [v.main === m.source, m.clicked],
-    setOfflineStatus:          [m.type === 'online' || m.type === 'offline']
+    setOfflineStatus:          [m.type === 'online' || m.type === 'offline'],
+    setResize:                 ['resize' ]
   }
   L.runQualifiedMethods(m.modelMethodQualifiers, c, c.updateView)
 }
@@ -75,6 +76,7 @@ c.initialize = function(eventObject){
   //attach "id"-ed elements to our view object (after giving window its own id)
   window.id = 'window'
   L.attachAllElementsById(v)
+  
   
   //for apple devices
   L.noPinchZoom()
@@ -103,13 +105,15 @@ c.initialize = function(eventObject){
 }
 //============| END of INITIALIZE |================//
 c.restorePriorModel = function(eventObject){
-  c.updateModel({target:{id:'dummy'},type: 'dummy'})
-  localStorage.removeItem('m')  
+  c.updateModel({target:{id:'dummy'},type: 'dummy'})   
   if(localStorage && localStorage.getItem('m')){
     m = JSON.parse(localStorage.getItem('m'))
   }
   
   Object.keys(m.modelMethodQualifiers).forEach(methodName =>{
+    m.isOnline = navigator.onLine
+   
+ 
     let prefix = methodName.slice(0,3)
     let newMethodName = 'show' + methodName.slice(3)    
     if(prefix === 'set' && c[newMethodName]){
@@ -123,4 +127,5 @@ c.restorePriorModel = function(eventObject){
   if(m.popupIsVisible){
     v.popupHolder.styles('visibility: visible')('opacity: 0.85')    
   }
+  m.isOnline = true;
 }
