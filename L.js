@@ -1,3 +1,11 @@
+/*
+  Author:  Abbas Abdulmalik
+  Created: ~ May, 2017
+  Revised: August 14, 2017 
+  Original Filename: L.js 
+  Purpose: a small personal re-usable js library for a simple MVC architecture
+  Notes: 
+*/
 var L = {}
 L.styles = function(styleString){
   const colonPosition = styleString.indexOf(':');
@@ -6,6 +14,17 @@ L.styles = function(styleString){
   this.style[property] = value
   
   return this.styles  
+}
+
+L.attachAllElementsById = function(here){
+    let allElements = document.getElementsByTagName('*')
+    let array = []
+    array.forEach.call(allElements, function(element)  {
+        if(element.id){
+            here[element.id] = element
+            element.styles = L.styles.bind(element) // attach L's styles() method here         
+        }
+    })
 }
 
 L.noPinchZoom = function(){
@@ -44,13 +63,3 @@ L.runQualifiedMethods = function(functionQualifiers, object, runNextUpdate){
   }
 }
 
-L.attachAllElementsById = function(here){
-    let allElements = document.getElementsByTagName('*')
-    let array = []
-    array.forEach.call(allElements, function(element)  {
-        if(element.id){
-            here[element.id] = element
-            element.styles = L.styles.bind(element)          
-        }
-    })
-}
