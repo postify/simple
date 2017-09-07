@@ -107,13 +107,14 @@ c.initialize = function(eventObject){
 //--------------
 c.restorePriorModel = function(eventObject){
   c.updateModel(eventObject)
+  if(localStorage && localStorage.getItem('m')){
+    m = JSON.parse(localStorage.getItem('m'))
+  }  
   Object.keys(m.modelMethodQualifiers).forEach(methodName =>{
     let prefix = methodName.slice(0,3)
-    let newMethodName = 'show' + methodName.slice(3)
-    
-    if(prefix === 'set' && object[newMethodName]){
-      object[newFunctionName]()
-    }
-    
+    let newMethodName = 'show' + methodName.slice(3)    
+    if(prefix === 'set' && c[newMethodName]){
+      c[newMethodName]()
+    }    
   }) 
 }
