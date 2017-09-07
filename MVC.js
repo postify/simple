@@ -44,10 +44,11 @@ m.image1url = 'https://cdn.glitch.com/64ea24dd-529d-44b3-b288-d7bd5450effc%2FBal
 m.image2url = 'https://cdn.glitch.com/64ea24dd-529d-44b3-b288-d7bd5450effc%2FJapan.jpg?1504325351040'
 m.currentImageUrl = ''
 
+m.modelMethodQualifiers = {}
 //===========| UPDATE MODEL |===========//
 c.updateModel = function(eventObject){
   c.updateBasicStates(eventObject)
-  const modelMethodQualifiers = {
+  m.modelMethodQualifiers = {
     setPopupToggle:            [v.messageHolder === m.source, m.clicked, m.shroudIsVisible],
     setShroudVisible:          [(v.btn1 === m.source || v.btn2 === m.source), m.clicked],
     setShroudHidden:           [v.btnHideShroud === m.source, m.clicked],
@@ -69,8 +70,7 @@ c.updateView = function(){
 }
 
 //============| INITIALIZE |================//
-c.initialize = function(eventObject){
-  
+c.initialize = function(eventObject){  
   //attach "id"-ed elements to our view object (after giving window its own id)
   window.id = 'window'
   L.attachAllElementsById(v)
@@ -79,8 +79,8 @@ c.initialize = function(eventObject){
   L.noPinchZoom()
   
   //get stored states
-  c.getStoredStates(eventObject)  
-  /*
+  //c.getStoredStates(eventObject)  
+  
   //list of event types of interest
   m.eventTypes = [
     'mousedown',
@@ -101,36 +101,7 @@ c.initialize = function(eventObject){
     window.addEventListener(eventType, c.updateModel, true )
   })
   
-  c.updateModel(eventObject)
-  */
+  //c.updateModel(eventObject)
+  
 }
-//------------------
 
-c.getStoredStates = function(eventObject){
-  const storedModel = {}
-  if(localStorage.getItem('m')){
-    m = JSON.parse(localStorage.getItem('m'))
-    setTimeout(function(){
-    m.eventTypes = [
-      'mousedown',
-      'touchstart',
-      'mouseup',
-      'touchend',
-      'mousemove',
-      'touchmove',
-      'resize',
-      'keyup',
-      'keydown',
-      'online',
-      'offline',
-      'dblclick'
-    ]
-    //make the window object listen to, and handle these event types
-    m.eventTypes.forEach(eventType =>{
-      window.addEventListener(eventType, c.updateModel, true )
-    })
-
-    c.updateModel(eventObject)               
-    },100)
-  }
-}
