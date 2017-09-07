@@ -57,7 +57,7 @@ c.updateModel = function(eventObject){
     setBtn2Toggle:             [v.btn2 === m.source, m.clicked],
     setRandomBackgroundColor:  [v.main === m.source, m.clicked],
     setOfflineStatus:          [m.type === 'online' || m.type === 'offline'],
-    setResize:                 ['resize' ]
+    setResize:                 ['resize' === m.type]
   }
   L.runQualifiedMethods(m.modelMethodQualifiers, c, c.updateView)
 }

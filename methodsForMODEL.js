@@ -35,6 +35,8 @@ c.updateBasicStates = function(eventObject){
   
   m.moveCount = m.moved ? ++m.moveCount : 0
   
+  m.innerWidth = 0
+  
   m.clicked = wasClicked()
   //------| helper(s) |--------//
   function wasClicked(){
@@ -49,7 +51,7 @@ c.updateBasicStates = function(eventObject){
   
   if(localStorage){
     setTimeout(function(){
-      const modelAsString = JSON.stringify(m)
+      let modelAsString = JSON.stringify(m)
       localStorage.setItem('m', modelAsString)      
       console.clear()
       console.log(localStorage.getItem('m'))      
@@ -94,4 +96,8 @@ c.setOfflineStatus = function(){
   else if(m.type === 'offline'){
     m.isOnline = false;
   }
+}
+
+c.setResize = function(){
+  m.innerWidth = window.innerWidth
 }
