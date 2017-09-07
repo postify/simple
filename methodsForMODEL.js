@@ -43,11 +43,14 @@ c.updateBasicStates = function(eventObject){
   }
   //-------------------------------//
   
-  //save model in localStorage
+  //save the updated model in localStorage
   if(localStorage){
-    const modelAsString = JSON.stringify(m);
-    
-    
+    setTimeout(function(){
+      const modelAsString = JSON.stringify(m)
+      localStorage.setItem('m', modelAsString)      
+      console.clear()
+      console.log(localStorage.getItem('m'))      
+    },100)
   }
 }
 
