@@ -103,5 +103,6 @@ c.initialize = function(eventObject){
   
   //c.updateModel(eventObject)
   
+  //alert(Object.keys(m.modelMethodQualifiers))
 }
 
