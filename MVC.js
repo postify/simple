@@ -57,7 +57,7 @@ c.updateModel = function(eventObject){
     setRandomBackgroundColor:  [v.main === m.source, m.clicked],
     setOfflineStatus:          [m.type === 'online' || m.type === 'offline']
   }
-  L.runQualifiedMethods(modelMethodQualifiers, c, c.updateView)
+  L.runQualifiedMethods(m.modelMethodQualifiers, c, c.updateView)
 }
 
 //===========| UPDATE VIEW |===========//
