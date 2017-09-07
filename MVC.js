@@ -77,7 +77,7 @@ c.initialize = function(eventObject){
   //for apple devices
   L.noPinchZoom()
   
-  //list event types of interest
+  //list of event types of interest
   m.eventTypes = [
     'mousedown',
     'touchstart',
