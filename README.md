@@ -6,7 +6,7 @@ by running qualified methods of the controller object.
 A few demo actions are included as examples. 
 
 Except for Lea Verou's prefixfree library which adds
-two objects to the global scope (the window object),
+2 objects to the global namespace (the window object),
 this template adds only 4 more: 
 
 L, a small personal js library;

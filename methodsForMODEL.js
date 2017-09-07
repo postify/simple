@@ -1,4 +1,4 @@
-/*global L*/
+is /*global L*/
 /*global m*/
 /*global v*/
 /*global c*/
