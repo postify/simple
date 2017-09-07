@@ -70,6 +70,9 @@ c.updateView = function(){
 
 //============| INITIALIZE |================//
 c.initialize = function(eventObject){
+  //get stored states
+  c.getStoredStates()
+  
   //attach "id"-ed elements to our view object (after giving window its own id)
   window.id = 'window'
   L.attachAllElementsById(v)
@@ -99,4 +102,10 @@ c.initialize = function(eventObject){
   
   c.updateModel(eventObject)
 }
-
+//------------------
+c.getStoredStates = function(){
+  const storedModel = {}
+  if(false){
+    
+  }
+}
