@@ -6,6 +6,7 @@
   Purpose: a small personal re-usable js library for a simple MVC architecture
   Notes: 
 */
+
 var L = {}
 L.styles = function(styleString){
   const colonPosition = styleString.indexOf(':');
