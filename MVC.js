@@ -106,7 +106,7 @@ c.initialize = function(eventObject){
 
 //--------------
 c.restorePriorModel = function(eventObject){
-  c.updateModel(eventObject)
+  c.updateModel({target:{id:'dummy'},type: 'dummy'})
   if(localStorage && localStorage.getItem('m')){
     m = JSON.parse(localStorage.getItem('m'))
   }  
@@ -116,5 +116,9 @@ c.restorePriorModel = function(eventObject){
     if(prefix === 'set' && c[newMethodName]){
       c[newMethodName]()
     }    
-  }) 
+  })
+  */
+  if(m.shroudIsVisible){
+    v.shroud.styles('visibility: visible')('opacity: 1')
+  }
 }
