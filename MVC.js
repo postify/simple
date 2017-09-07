@@ -79,8 +79,8 @@ c.initialize = function(eventObject){
   L.noPinchZoom()
   
   //get stored states
-  c.getStoredStates()  
-  
+  c.getStoredStates(eventObject)  
+  /*
   //list of event types of interest
   m.eventTypes = [
     'mousedown',
@@ -101,15 +101,36 @@ c.initialize = function(eventObject){
     window.addEventListener(eventType, c.updateModel, true )
   })
   
-  //c.updateModel(eventObject)
+  c.updateModel(eventObject)
+  */
 }
 //------------------
 
-c.getStoredStates = function(){
+c.getStoredStates = function(eventObject){
   const storedModel = {}
   if(localStorage.getItem('m')){
     m = JSON.parse(localStorage.getItem('m'))
-    //c.updateModel(m.eventObjects[1])
-    //alert(localStorage.getItem('m'))
+    setTimeout(function(){
+    m.eventTypes = [
+      'mousedown',
+      'touchstart',
+      'mouseup',
+      'touchend',
+      'mousemove',
+      'touchmove',
+      'resize',
+      'keyup',
+      'keydown',
+      'online',
+      'offline',
+      'dblclick'
+    ]
+    //make the window object listen to, and handle these event types
+    m.eventTypes.forEach(eventType =>{
+      window.addEventListener(eventType, c.updateModel, true )
+    })
+
+    c.updateModel(eventObject)               
+    },100)
   }
 }

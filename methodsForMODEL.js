@@ -17,7 +17,7 @@ c.updateBasicStates = function(eventObject){
 
   m.type = eventObject.type
   m.source = eventObject.target
-  //m.id = m.source.id
+  m.id = m.source.id
   
   m.priorPressed.unshift(m.pressed)
   m.priorPressed.pop()  
@@ -44,14 +44,16 @@ c.updateBasicStates = function(eventObject){
   //-------------------------------//
   
   //save the updated model in localStorage
+  
   if(localStorage){
     setTimeout(function(){
       const modelAsString = JSON.stringify(m)
       localStorage.setItem('m', modelAsString)      
-      //console.clear()
+      console.clear()
       console.log(localStorage.getItem('m'))      
     },100)
   }
+  
 }
 
 //-------------------
