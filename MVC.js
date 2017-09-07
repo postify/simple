@@ -105,7 +105,7 @@ c.initialize = function(eventObject){
 //------------------
 c.getStoredStates = function(){
   const storedModel = {}
-  if(false){
+  if(localStorage.getItem('m')){
     
   }
 }

@@ -41,6 +41,14 @@ c.updateBasicStates = function(eventObject){
       (m.elapsedTimes[0] > m.debounceTimeMin) &&
       (m.elapsedTimes[0] < m.debounceTimeMax)
   }
+  //-------------------------------//
+  
+  //save model in localStorage
+  if(localStorage){
+    const modelAsString = JSON.stringify(m);
+    
+    
+  }
 }
 
 //-------------------
