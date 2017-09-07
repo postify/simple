@@ -1,6 +1,6 @@
 /*global L*/
 //===========| CREATE MODEL, VIEW and CONTROLLER objects |========//
-const m = {}
+let m = {}
 const v = {}
 const c = {}
 
@@ -103,9 +103,11 @@ c.initialize = function(eventObject){
   c.updateModel(eventObject)
 }
 //------------------
+
 c.getStoredStates = function(){
   const storedModel = {}
   if(localStorage.getItem('m')){
-    
+    m = JSON.parse(localStorage.getItem('m'))
+    alert(localStorage.getItem('m'))
   }
 }
