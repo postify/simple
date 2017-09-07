@@ -45,10 +45,10 @@ m.image2url = 'https://cdn.glitch.com/64ea24dd-529d-44b3-b288-d7bd5450effc%2FJap
 m.currentImageUrl = ''
 
 m.modelMethodQualifiers = {}
-m.autoModelUpdate = false
+
 //===========| UPDATE MODEL |===========//
 c.updateModel = function(eventObject){
-  c.updateBasicStates(eventObject, m.autoModelUpdate)
+  c.updateBasicStates(eventObject)
   m.modelMethodQualifiers = {
     setPopupToggle:            [v.messageHolder === m.source, m.clicked, m.shroudIsVisible],
     setShroudVisible:          [(v.btn1 === m.source || v.btn2 === m.source), m.clicked],
@@ -78,10 +78,7 @@ c.initialize = function(eventObject){
   
   //for apple devices
   L.noPinchZoom()
-  
-  //get stored states
-  //c.getStoredStates(eventObject)  
-  
+ 
   //list of event types of interest
   m.eventTypes = [
     'mousedown',
@@ -104,10 +101,8 @@ c.initialize = function(eventObject){
   
   c.restorePriorModel(eventObject)
 }
-
-//--------------
+//============| END of INITIALIZE |================//
 c.restorePriorModel = function(eventObject){
-  m.autoModelUpdate = true;  
   c.updateModel({target:{id:'dummy'},type: 'dummy'})
   if(localStorage && localStorage.getItem('m')){
     m = JSON.parse(localStorage.getItem('m'))
@@ -119,13 +114,12 @@ c.restorePriorModel = function(eventObject){
     if(prefix === 'set' && c[newMethodName]){
       c[newMethodName]()
     }    
-  })
+  })  
   
   if(m.shroudIsVisible){
     v.shroud.styles('visibility: visible')('opacity: 1')
   }
   if(m.popupIsVisible){
-    v.popup.styles('visibility: visible')('opacity: 1')    
+    v.popupHolder.styles('visibility: visible')('opacity: 0.85')    
   }
-  m.autoModelUpdate = true;  
 }
