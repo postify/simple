@@ -45,9 +45,10 @@ m.image2url = 'https://cdn.glitch.com/64ea24dd-529d-44b3-b288-d7bd5450effc%2FJap
 m.currentImageUrl = ''
 
 m.modelMethodQualifiers = {}
+m.autoModelUpdate = false
 //===========| UPDATE MODEL |===========//
 c.updateModel = function(eventObject){
-  c.updateBasicStates(eventObject)
+  c.updateBasicStates(eventObject, m.autoModelUpdate)
   m.modelMethodQualifiers = {
     setPopupToggle:            [v.messageHolder === m.source, m.clicked, m.shroudIsVisible],
     setShroudVisible:          [(v.btn1 === m.source || v.btn2 === m.source), m.clicked],
@@ -106,10 +107,12 @@ c.initialize = function(eventObject){
 
 //--------------
 c.restorePriorModel = function(eventObject){
+  m.autoModelUpdate = true;  
   c.updateModel({target:{id:'dummy'},type: 'dummy'})
   if(localStorage && localStorage.getItem('m')){
     m = JSON.parse(localStorage.getItem('m'))
-  }  
+  }
+  
   Object.keys(m.modelMethodQualifiers).forEach(methodName =>{
     let prefix = methodName.slice(0,3)
     let newMethodName = 'show' + methodName.slice(3)    
@@ -117,8 +120,12 @@ c.restorePriorModel = function(eventObject){
       c[newMethodName]()
     }    
   })
-  */
+  
   if(m.shroudIsVisible){
     v.shroud.styles('visibility: visible')('opacity: 1')
   }
+  if(m.popupIsVisible){
+    v.popup.styles('visibility: visible')('opacity: 1')    
+  }
+  m.autoModelUpdate = true;  
 }
