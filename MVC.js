@@ -112,6 +112,7 @@ c.restorePriorModel = function(eventObject){
   if(localStorage && localStorage.getItem('m')){
     m = JSON.parse(localStorage.getItem('m'))// Use it, then ...
     //localStorage.removeItem('m') // ... lose it.
+    
   }
   
   Object.keys(m.modelMethodQualifiers).forEach(methodName =>{

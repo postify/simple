@@ -53,30 +53,36 @@ c.updateBasicStates = function(eventObject){
 //-------------------
 c.setBtn1Toggle = function(){
   m.btn1In = !m.btn1In
+  c.updateLocalStorage()  
 }
 
 c.setBtn2Toggle = function(){
-  m.btn2In = !m.btn2In  
+  m.btn2In = !m.btn2In 
+  c.updateLocalStorage()  
 }
 
 c.setRandomBackgroundColor = function(){
   const angle = 360 * Math.random()
   m.randomBackgroundColor = `hsl(${angle}, 50%, 50%)`
+  c.updateLocalStorage()  
 }
 
 c.setShroudHidden = function (){
   m.shroudIsVisible = false
   m.popupIsVisible = false
   m.btn1In = false
-  m.btn2In = false  
+  m.btn2In = false
+  c.updateLocalStorage()  
 }
 
 c.setShroudVisible = function(){
   m.shroudIsVisible = true
+  c.updateLocalStorage()  
 }
 
 c.setPopupToggle = function(){
   m.popupIsVisible = !m.popupIsVisible
+  c.updateLocalStorage()  
 }
 
 c.setOfflineStatus = function(){
@@ -96,6 +102,7 @@ c.setResize = function(){
 
 c.setClearLocalStorage = function(){
   m.btnClearLocalStorageIn = !m.btnClearLocalStorageIn
+  c.updateLocalStorage()  
 }
 
 c.updateLocalStorage = function(){
