@@ -89,7 +89,7 @@ button:hover{
   bottom: 0;
   left: 0;
   right: 0;
-  transition: all 2s ease;
+  transition: all 1s ease;
   opacity: 1;
   background-color: rgb(100, 100, 100);
   visibility: visible;
@@ -155,7 +155,11 @@ button:hover{
 }
 
 #messageText{
+  display: inline-block;
   color: white;
   text-shadow: 0 1px 0 black;
   font-size: 2rem;
+  visibility: visible;
+  opacity: 1;
+  transition: all 2s ease
 }
