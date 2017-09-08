@@ -5,7 +5,6 @@
 
 //===| functions that UPDATE MODEL |========//
 c.updateBasicStates = function(eventObject){
-  //if(!m.autoModelUpdate){return}
   
   m.priorStartTime = m.startTime
   m.startTime = Date.now()
@@ -47,8 +46,7 @@ c.updateBasicStates = function(eventObject){
   }
   //-------------------------------//
   
-  //save the updated model in localStorage
-  
+  //save the updated model in localStorage  
   if(localStorage){
     setTimeout(function(){
       let modelAsString = JSON.stringify(m)
