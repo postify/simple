@@ -80,13 +80,9 @@ c.initialize = function(eventObject){
   window.id = 'window'
   L.attachAllElementsById(v)
   
-
-  
   setTimeout(function(){  
     v.messageText.styles('visibility: hidden')('opacity: 0')
   }, 2000)
-  
-  
   
   //for apple devices
   L.noPinchZoom()
@@ -115,7 +111,6 @@ c.initialize = function(eventObject){
 }
 //============| END of INITIALIZE |================//
 c.restorePriorModel = function(eventObject){
-  //c.updateModel({target:{id:'dummy'},type: 'dummy'})   
   if(localStorage && localStorage.getItem('m')){
     m = JSON.parse(localStorage.getItem('m'))// Use it, then ...
     localStorage.removeItem('m') // ... lose it.

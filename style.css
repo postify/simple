@@ -15,7 +15,8 @@ body{
   margin: 0;
   padding: 0;
   background: thistle;
-  text-align: center;  
+  text-align: center;
+  font-family: sans-serif;
 }
 
 main {
@@ -90,8 +91,9 @@ button:hover{
   left: 0;
   right: 0;
   transition: all 1s ease;
-  opacity: 1;
-  background-color: rgb(100, 100, 100);
+  opacity: 0.97;
+  /*background-color: rgb(100, 100, 100);*/
+  background-color: teal;
   visibility: visible;
   overflow: hidden;
 }
