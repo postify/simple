@@ -80,6 +80,14 @@ c.initialize = function(eventObject){
   window.id = 'window'
   L.attachAllElementsById(v)
   
+  //kill the splash page after 3 seconds:
+  setTimeout(function(){
+    v.shroud
+      .styles
+       ('visibility: hidden')
+       ('opacity: 0')
+    v.messageText.innerText = ''
+  }, 4000)
   
   //for apple devices
   L.noPinchZoom()

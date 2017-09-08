@@ -89,7 +89,7 @@ button:hover{
   bottom: 0;
   left: 0;
   right: 0;
-  transition: all 0.75s ease;
+  transition: all 2s ease;
   opacity: 1;
   background-color: rgb(100, 100, 100);
   visibility: visible;
@@ -152,4 +152,10 @@ button:hover{
   font-size: 2rem;
   font-family: sans-serif;
   z-index: 3;
+}
+
+#messageText{
+  color: white;
+  text-shadow: 0 1px 0 black;
+  font-size: 2rem;
 }
