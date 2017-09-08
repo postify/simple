@@ -46,7 +46,7 @@ m.image2url = 'https://cdn.glitch.com/64ea24dd-529d-44b3-b288-d7bd5450effc%2FJap
 m.currentImageUrl = ''
 
 m.modelMethodQualifiers = {}
-m.innerWidth = 0;
+m.innerWidth = window.innerWidth;
 
 //===========| UPDATE MODEL |===========//
 c.updateModel = function(eventObject){
@@ -111,7 +111,7 @@ c.restorePriorModel = function(eventObject){
   //c.updateModel({target:{id:'dummy'},type: 'dummy'})   
   if(localStorage && localStorage.getItem('m')){
     m = JSON.parse(localStorage.getItem('m'))// Use it, then ...
-    localStorage.removeItem('m') // ... lose it.
+    //localStorage.removeItem('m') // ... lose it.
   }
   
   Object.keys(m.modelMethodQualifiers).forEach(methodName =>{

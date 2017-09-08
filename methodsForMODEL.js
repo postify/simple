@@ -47,14 +47,7 @@ c.updateBasicStates = function(eventObject){
   //-------------------------------//
   
   //save the updated model in localStorage  
-  if(localStorage){
-    setTimeout(function(){
-      let modelAsString = JSON.stringify(m)
-      localStorage.setItem('m', modelAsString)      
-      console.clear()
-      console.log(localStorage.getItem('m'))      
-    },100)
-  }
+  c.updateLocalStorage()
   
 }
 
@@ -94,13 +87,25 @@ c.setOfflineStatus = function(){
   else if(m.type === 'offline'){
     m.isOnline = false;
   }
+  c.updateLocalStorage()  
 }
 
 c.setResize = function(){
   m.innerWidth = window.innerWidth
-  alert(m.innerWidth)
+  c.updateLocalStorage()
 }
 
 c.setClearLocalStorage = function(){
   m.btnClearLocalStorageIn = !m.btnClearLocalStorageIn
+}
+
+c.updateLocalStorage = function(){
+  if(localStorage){
+    setTimeout(function(){
+      let modelAsString = JSON.stringify(m)
+      localStorage.setItem('m', modelAsString)      
+      console.clear()
+      console.log(localStorage.getItem('m'))      
+    },100)
+  }
 }
