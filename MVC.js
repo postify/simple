@@ -35,7 +35,7 @@ m.moveCount = 0
 
 //specialized states (these vary per application)
 m.debounceTimeMin = 25 //in milliseconds
-m.debounceTimeMax = 500 // milliseconds
+m.debounceTimeMax = 750 // milliseconds
 m.btn1In = false
 m.btn2In = false
 m.btnClearLocalStorageIn = false
@@ -112,7 +112,7 @@ c.restorePriorModel = function(eventObject){
   if(localStorage && localStorage.getItem('m')){
     m = JSON.parse(localStorage.getItem('m'))// Use it, then ...
     localStorage.removeItem('m') // ... lose it.
-    console.log(localStorage.getItem('m'))
+    console.log('locally stored m:', localStorage.getItem('m'))
   }
   
   Object.keys(m.modelMethodQualifiers).forEach(methodName =>{
@@ -123,7 +123,6 @@ c.restorePriorModel = function(eventObject){
       c[newMethodName]()
     }    
   })  
-  //localStorage.removeItem('m')
   if(m.shroudIsVisible){
     v.shroud.styles('visibility: visible')('opacity: 1')
   }
