@@ -131,5 +131,5 @@ c.restorePriorModel = function(eventObject){
   if(m.popupIsVisible){
     v.popupHolder.styles('visibility: visible')('opacity: 0.85')    
   }
-  m.isOnline = true;
+  m.isOnline = navigator.onLine;
 }
