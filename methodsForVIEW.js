@@ -113,7 +113,6 @@ c.showOfflineStatus = function(){
 }
 
 c.showClearLocalStorage = function(){
-  //alert("showing clearLocalStorage")
   if(m.btnClearLocalStorageIn){
     v.btnClearLocalStorage.setAttribute('class', 'btnIn')
     alert("BEFORE:\n " + localStorage.getItem('m'))
