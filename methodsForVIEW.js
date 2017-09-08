@@ -113,5 +113,16 @@ c.showOfflineStatus = function(){
 }
 
 c.showClearLocalStorage = function(){
- //alert("showing clearL")
+  //alert("showing clearLocalStorage")
+  if(m.btnClearLocalStorageIn){
+    v.btnClearLocalStorage.setAttribute('class', 'btnIn')
+    alert("BEFORE:\n " + localStorage.getItem('m'))
+    localStorage.clear('m')
+    alert("AFTER\n " + localStorage.getItem('m'))    
+  }
+  setTimeout(function(){
+    m.btnClearLocalStorageIn = false
+    v.btnClearLocalStorage.setAttribute('class', 'btnOut')    
+  }, 300)
+
 }
