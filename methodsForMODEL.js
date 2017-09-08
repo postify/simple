@@ -101,3 +101,7 @@ c.setOfflineStatus = function(){
 c.setResize = function(){
   m.innerWidth = window.innerWidth
 }
+
+c.setClearLocalStorage = function(){
+  m.btnClearLocalStorageIn = !m.btnClearLocalStorageIn
+}

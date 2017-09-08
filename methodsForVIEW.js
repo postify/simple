@@ -111,3 +111,7 @@ c.showOfflineStatus = function(){
     v.offlineMessage.style.color = "red"
   }
 }
+
+c.showClearLocalStorage = function(){
+ //alert("showing clearL")
+}

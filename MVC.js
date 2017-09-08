@@ -38,6 +38,7 @@ m.debounceTimeMin = 25 //in milliseconds
 m.debounceTimeMax = 750 // milliseconds
 m.btn1In = false
 m.btn2In = false
+m.btnClearLocalStorageIn = false
 m.randomBackgroundColor = ""
 
 m.image1url = 'https://cdn.glitch.com/64ea24dd-529d-44b3-b288-d7bd5450effc%2FBaliFishermen.jpg?1504408500932'
@@ -57,7 +58,8 @@ c.updateModel = function(eventObject){
     setBtn2Toggle:             [v.btn2 === m.source, m.clicked],
     setRandomBackgroundColor:  [v.main === m.source, m.clicked],
     setOfflineStatus:          [m.type === 'online' || m.type === 'offline'],
-    setResize:                 ['resize' === m.type]
+    setResize:                 ['resize' === m.type],
+    setClearLocalStorage:      [v.btnClearLocalStorage === m.source, m.clicked],
   }
   L.runQualifiedMethods(m.modelMethodQualifiers, c, c.updateView)
 }
