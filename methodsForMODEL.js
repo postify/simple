@@ -34,7 +34,7 @@ c.updateBasicStates = function(eventObject){
   
   m.moveCount = m.moved ? ++m.moveCount : 0
   
-  m.innerWidth = 0
+  m.innerWidth = window.innerWidth
   
   m.clicked = wasClicked()
   //------| helper(s) |--------//
@@ -47,8 +47,7 @@ c.updateBasicStates = function(eventObject){
   //-------------------------------//
   
   //save the updated model in localStorage  
-  c.updateLocalStorage()
-  
+  c.updateLocalStorage()  
 }
 
 //-------------------
@@ -102,7 +101,11 @@ c.setClearLocalStorage = function(){
 c.updateLocalStorage = function(){
   if(localStorage){
     setTimeout(function(){
-      let modelAsString = JSON.stringify(m)
+      try{
+        let modelAsString = JSON.stringify(m)        
+      }
+      catch(e){console.log(e)}
+
       localStorage.setItem('m', modelAsString)      
       console.clear()
       console.log(localStorage.getItem('m'))      
