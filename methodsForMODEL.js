@@ -101,13 +101,14 @@ c.setClearLocalStorage = function(){
 c.updateLocalStorage = function(){
   if(localStorage){
     setTimeout(function(){
+      let modelAsString=''
       try{
-        let modelAsString = JSON.stringify(m)        
+         modelAsString = JSON.stringify(m)        
       }
       catch(e){console.log(e)}
 
       localStorage.setItem('m', modelAsString)      
-      console.clear()
+      console.log('\n\n\n')
       console.log(localStorage.getItem('m'))      
     },100)
   }
