@@ -105,22 +105,21 @@ c.initialize = function(eventObject){
 }
 //============| END of INITIALIZE |================//
 c.restorePriorModel = function(eventObject){
-  c.updateModel({target:{id:'dummy'},type: 'dummy'})   
+  //c.updateModel({target:{id:'dummy'},type: 'dummy'})   
   if(localStorage && localStorage.getItem('m')){
-    m = JSON.parse(localStorage.getItem('m'))
+    m = JSON.parse(localStorage.getItem('m'))// Use it, then ...
+    localStorage.removeItem('m') // ... lose it.
   }
   
   Object.keys(m.modelMethodQualifiers).forEach(methodName =>{
-    m.isOnline = navigator.onLine
-   
- 
+    m.isOnline = navigator.onLine  
     let prefix = methodName.slice(0,3)
     let newMethodName = 'show' + methodName.slice(3)    
     if(prefix === 'set' && c[newMethodName]){
       c[newMethodName]()
     }    
   })  
-  localStorage.removeItem('m')
+  //localStorage.removeItem('m')
   if(m.shroudIsVisible){
     v.shroud.styles('visibility: visible')('opacity: 1')
   }
