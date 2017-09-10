@@ -73,7 +73,18 @@ button{
   text-shadow: 0 1px 0 white;  
 }
 
+/*============| player styles |=============*/
 .player{
+  text-align: center;
   margin-bottom: 1rem;
-  width
+  width: 100%;
+  border-radius: 0.75rem;
+  box-shadow: 0.1rem 0.1rem 1rem black;
+  padding: 0.5rem;
+}
+.btnPlus{
+  width: 50%;
+}
+input{
+  text-align: center;
 }
