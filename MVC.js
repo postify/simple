@@ -103,7 +103,15 @@ c.initialize = function(eventObject){
   
   setTimeout(function(){  
     v.messageText.styles('visibility: hidden')('opacity: 0')
-    v.shroud.styles('visibility: hidden')('opacity: 0')    
+    v.shroud
+      .styles
+        ('visibility: hidden')
+        ('opacity: 0')
+      setTimeout(function(){
+        v.shroud
+          .styles
+            ('transition: all 0s ease')
+    }, 2000)
   }, 2000)
   
   //for apple devices

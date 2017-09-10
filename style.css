@@ -64,7 +64,13 @@ button{
   visibility: visible;
   overflow: hidden;
 }
-
+#nameInput{
+  display: inline-block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 #btnHideShroud{
   position: absolute;
   top: 0.5rem;

@@ -73,8 +73,12 @@ c.showShroudHidden = function (){
   }, 500) 
 }
 
+c.showEnterName = function(){
+  c.showShroudVisible()
+  v.nameInput.value = m.source.value
+}
+
 c.showShroudVisible = function(){
-  alert()
   v.shroud
     .styles
       ('opacity: 1') 
