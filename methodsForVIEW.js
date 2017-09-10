@@ -38,7 +38,7 @@ c.showButtonClicked = function(){
         setTimeout(function(){
           button.classList.remove('btnIn')
           button.classList.add('btnOut')
-          button.style.background = 'white'
+          button.style.background = '#eee'
         }, m.TOGGLE_DELAY)
       }
     })   
