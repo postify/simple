@@ -188,12 +188,15 @@ c.restorePriorModel = function(eventObject){
     }    
   })
   
-  if(m.shroudIsVisible){
-    v.shroud.styles('visibility: visible')('opacity: 1')
-  }
-  if(m.popupIsVisible){
-    v.popupHolder.styles('visibility: visible')('opacity: 0.85')    
-  }
+  ;[0,1,2,3].forEach(index=>{
+    const scoresArray = [...document.getElementsByClassName('score')]
+    scoresArray.forEach( scoreHolder => {
+      if(scoreHolder.classList.contains('' + index)){
+        scoreHolder.value = m.players[index].score
+      }
+    })  
+  })
+  
   m.isOnline = navigator.onLine;
 }
 

@@ -31,7 +31,7 @@ c.showButtonClicked = function(){
   function toggleButton(index, className){
     const buttonsArray = [...document.getElementsByClassName(className)]
     buttonsArray.forEach(button => {
-      if(button.classList.contains(''+index)){
+      if(button.classList.contains('' + index)){
         button.classList.remove('btnOut')
         button.classList.add('btnIn')
         setTimeout(function(){
@@ -43,7 +43,12 @@ c.showButtonClicked = function(){
   }
   //--------------------------------------//
   function showScore(index){
-    const scoresArray = [...document.getElementsByClassName(className)]
+    const scoresArray = [...document.getElementsByClassName('score')]
+    scoresArray.forEach( scoreHolder => {
+      if(scoreHolder.classList.contains('' + index)){
+        scoreHolder.value = m.players[index].score
+      }
+    })
   }
 }
 
