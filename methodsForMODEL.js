@@ -44,24 +44,13 @@ c.updateBasicStates = function(eventObject){
       (m.elapsedTimes[0] > m.debounceTimeMin) &&
       (m.elapsedTimes[0] < m.debounceTimeMax)
   }
-  //-------------------------------//
-  
-  //if(c.isButton() && m.clicked){alert(c.getClassNumber())}
+  //-------------------------------// 
   
   //save the updated model in localStorage  
   c.updateLocalStorage()  
 }
 
 //-------------------
-c.setBtn1Toggle = function(){
-  m.btn1In = !m.btn1In
-  c.updateLocalStorage()  
-}
-
-c.setBtn2Toggle = function(){
-  m.btn2In = !m.btn2In 
-  c.updateLocalStorage()  
-}
 
 c.setRandomBackgroundColor = function(){
   const angle = 360 * Math.random()

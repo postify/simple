@@ -12,36 +12,6 @@ c.showEvents = function(){
   v.info.innerText = info
 }
 
-c.showBtn1Toggle = function(){
-  if(m.btn1In){
-    m.currentImageUrl = m.image1url    
-    v.btn1.setAttribute('class', 'btnIn')
-    v.messageHolder
-      .styles
-        (`background: transparent url(${m.image1url}) no-repeat center`)
-        (`background-size: contain`)
-        (`opacity: 1`)    
-  }
-  else if(!m.btn1In){
-    v.btn1.setAttribute('class', 'btnOut')    
-  }
-}
-
-c.showBtn2Toggle = function(){
-  if(m.btn2In){
-    m.currentImageUrl = m.image2url
-    v.btn2.setAttribute('class', 'btnIn')    
-    v.messageHolder
-      .styles
-        (`background: transparent url(${m.image2url}) no-repeat center`)
-        (`background-size: contain`)
-        (`opacity: 1`)    
-  }
-  else if(!m.btn2In){
-    v.btn2.setAttribute('class', 'btnOut')    
-  }  
-}
-
 c.showRandomBackgroundColor = function(){
   v.main.styles(`background: ${m.randomBackgroundColor}`)  
 }
