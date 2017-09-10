@@ -177,23 +177,23 @@ c.restorePriorModel = function(eventObject){
     console.log('locally stored m:', localStorage.getItem('m'))
   }
   
-  Object.keys(m.modelMethodQualifiers).forEach(methodName =>{
-    m.isOnline = navigator.onLine  
-    let prefix = methodName.slice(0,3)
-    let newMethodName = 'show' + methodName.slice(3)    
-    if(prefix === 'set' && c[newMethodName]){
-      c[newMethodName]()
-    }    
-  })
   
   ;[0,1,2,3].forEach(index=>{
     const scoresArray = [...document.getElementsByClassName('score')]
     scoresArray.forEach( scoreHolder => {
       if(scoreHolder.classList.contains('' + index)){
-        scoreHolder.value = m.players[index].score
+        scoreHolder.value = m.players[index].score        
       }
     })  
   })
+  ;[0,1,2,3].forEach(index=>{
+    const scoresArray = [...document.getElementsByClassName('textInput')]
+    scoresArray.forEach( scoreHolder => {
+      if(scoreHolder.classList.contains('' + index)){
+        scoreHolder.value = m.players[index].name       
+      }
+    })  
+  })  
   
   m.isOnline = navigator.onLine;
 }
