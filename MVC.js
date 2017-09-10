@@ -137,6 +137,7 @@ c.initialize = function(eventObject){
 c.restorePriorModel = function(eventObject){
   if(localStorage && localStorage.getItem('m')){
     m = JSON.parse(localStorage.getItem('m'))
+    //delete localStorage.m
     console.log('locally stored m:', localStorage.getItem('m'))
   }  
   
