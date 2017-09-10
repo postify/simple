@@ -82,8 +82,15 @@ button{
   box-shadow: 0.1rem 0.1rem 1rem black;
   padding: 0.5rem;
 }
+.button{
+  
+}
+.buttonHolder{
+  width: 75%;
+}
 .btnPlus{
   width: 50%;
+  border: 1px solid black;
 }
 input{
   text-align: center;
