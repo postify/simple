@@ -14,14 +14,18 @@ c.showEvents = function(){
 //--------------------------
 c.showButtonClicked = function(){
   m.players.forEach((player, index) =>{
-    toggleButton(index)
+    if(player.btnPlusPressed){
+      player.btnPlusPre
+      toggleButton(index)
+    }
+
     
   })
   //-------------| helper |--------------//
   function toggleButton(index){
     const buttonsArray = [...document.getElementsByClassName('button')]
     buttonsArray.forEach(button => {
-      if(button.classListContains(index)){
+      if(button.classList.contains(''+index)){
         button.classList.remove('btnOut')
         button.classList.add('btnIn')
         setTimeout(function(){

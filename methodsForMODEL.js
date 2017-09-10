@@ -124,8 +124,8 @@ c.updateLocalStorage = function(){
       catch(e){console.log(e)}
 
       localStorage.setItem('m', modelAsString)      
-      console.log('\n\n\n')
-      console.log(localStorage.getItem('m'))      
+      //console.log('\n\n\n')
+      //console.log(localStorage.getItem('m'))      
     },100)
   }
 }
