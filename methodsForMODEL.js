@@ -59,9 +59,14 @@ c.setButtonClicked = function(){
     m.players[playerNumber].score += 1;
   }
   else if (m.source.classList.contains('btnMinus')){
-    
+    m.players[playerNumber].btnPlusPressed = false;
+    m.players[playerNumber].btnMinusPressed = true;
+    m.players[playerNumber].score -= 1;    
   }
+  alert(playerNumber +  ': ' + m.players[playerNumber].score)
 }
+
+//------------------
 c.setRandomBackgroundColor = function(){
   const angle = 360 * Math.random()
   m.randomBackgroundColor = `hsl(${angle}, 50%, 50%)`
