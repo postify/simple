@@ -106,12 +106,12 @@ c.setOfflineStatus = function(){
 }
 //---------------------
 c.setResize = function(){
-  //m.innerWidth = window.innerWidth
-  //c.updateLocalStorage()
+  m.innerWidth = window.innerWidth
+  c.updateLocalStorage()
 }
 //---------------------
 
-c.updateLocalStorage = function(){
+c.updateLocalStorage = function(){  
   if(localStorage){
     setTimeout(function(){
       let modelAsString=''
@@ -124,5 +124,5 @@ c.updateLocalStorage = function(){
       console.log('========(SEPARATOR LINE)========\n')
       console.log(localStorage.getItem('m'))      
     },100)
-  }
+  }  
 }

@@ -189,7 +189,15 @@ c.isButton = function isButton(){
 
 //---------------------
 c.isTextInput = function(){
-   return [...m.source.classList].some( className => className === 'textInput')  
+  let answer = false
+  try{
+    answer = [...m.source.classList].some( className => className === 'textInput')      
+  }
+  catch(e) {
+    answer = false
+    //console.log(e)
+  }
+  return answer 
 }
 
 
