@@ -71,13 +71,13 @@ button{
 #messageText{
   display: inline-block;
   font-size: 2.75rem;
-  color: #111;
+  color: black;
   font-weight: bold;
   text-shadow: 0 1px 0 white;
   border-radius: 1rem;
   padding: 1rem;
-  border: 1px solid black;
-  background: lightgray;
+  background: linear-gradient(lightgray, lightblue, hsl(250, 50%, 50%));
+  box-shadow: 0.5rem 0.5rem 2.5rem black;
 }
 
 /*============| player styles |=============*/
@@ -140,7 +140,7 @@ input[type=text]{
 }
 input[type=number]{
   display: inline-block;  
-  width: 32%;
+  width: 30%;
   font-weight: bold;
   margin-top: 0.25rem;
 }
