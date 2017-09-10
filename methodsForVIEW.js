@@ -15,15 +15,21 @@ c.showEvents = function(){
 c.showButtonClicked = function(){
   m.players.forEach((player, index) =>{
     if(player.btnPlusPressed){
-      player.btnPlusPre
-      toggleButton(index)
+      player.btnPlusPressed = false
+      player.btnMinusPressed = false      
+      toggleButton(index, "btnPlus")
+      showScore(index)
     }
-
-    
+    else if(player.btnMinusPressed){
+      player.btnPlusPressed = false
+      player.btnMinusPressed = false  
+      toggleButton(index, "btnMinus")
+      showScore(index)      
+    }
   })
-  //-------------| helper |--------------//
-  function toggleButton(index){
-    const buttonsArray = [...document.getElementsByClassName('button')]
+  //-------------| helpers |--------------//
+  function toggleButton(index, className){
+    const buttonsArray = [...document.getElementsByClassName(className)]
     buttonsArray.forEach(button => {
       if(button.classList.contains(''+index)){
         button.classList.remove('btnOut')
@@ -34,6 +40,10 @@ c.showButtonClicked = function(){
         }, m.TOGGLE_DELAY)
       }
     })   
+  }
+  //--------------------------------------//
+  function showScore(index){
+    const scoresArray = [...document.getElementsByClassName(className)]
   }
 }
 
