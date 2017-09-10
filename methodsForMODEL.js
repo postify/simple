@@ -52,7 +52,8 @@ c.updateBasicStates = function(eventObject){
 
 //-------------------
 c.setEnterName = function(){
-  alert()
+  c.setShroudVisible()
+  
 }
 //----------------------
 c.setButtonClicked = function(){
@@ -79,9 +80,6 @@ c.setRandomBackgroundColor = function(){
 //-------------------
 c.setShroudHidden = function (){
   m.shroudIsVisible = false
-  m.popupIsVisible = false
-  m.btn1In = false
-  m.btn2In = false
   c.updateLocalStorage()  
 }
 //------------------

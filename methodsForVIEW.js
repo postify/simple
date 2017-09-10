@@ -74,6 +74,7 @@ c.showShroudHidden = function (){
 }
 
 c.showShroudVisible = function(){
+  alert()
   v.shroud
     .styles
       ('opacity: 1') 
