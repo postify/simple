@@ -55,8 +55,14 @@ button{
   transition: all 1s ease;
   opacity: 0.97;
   /*background-color: rgb(100, 100, 100);*/
-  background-color: teal;
+  background: teal url(https://cdn.glitch.com/d2329b5c-8285-49d9-a412-4910e578e50e%2Fset175-175.jpg?1505007541585) no-repeat center;
+  background-size: 30rem 30rem;
   visibility: visible;
   overflow: hidden;
 }
 
+#offlineMessage{
+  opacity: 0;
+  color: red;
+  font-size: 2rem;
+}
