@@ -70,10 +70,7 @@ c.updateView = function(){
     downloadCurrentImage: [v.btnYes === m.source || v.btnNo === m.source, m.clicked, m.shroudIsVisible] 
   }
   L.runQualifiedMethods(viewMethodQualifiers, c, "no callback needed here")
-  //==============| Helpers |==============//
-  function getClassNumber(){
-    //all elements have a numeric class: find the number
-  }
+
 }
 
 //============| INITIALIZE |================//
@@ -112,6 +109,18 @@ c.initialize = function(eventObject){
   c.restorePriorModel(eventObject)
 }
 //============| END of INITIALIZE |================//
+
+//==============| Helpers |==============//
+c.getClassNumber = function getClassNumber(){
+  //all elements have a numeric class: find and return the number
+  const classArray = [...m.source.classList]
+  let classNumber;
+  classArray.forEach(className => typeOf)
+}
+c.isButton = function isButton(){
+    //return true if current target (source) is a member of class "button"
+    return [...m.source.classList].some( className => className === 'button')
+}
 c.restorePriorModel = function(eventObject){
   if(localStorage && localStorage.getItem('m')){
     m = JSON.parse(localStorage.getItem('m'))// Use it, then ...
@@ -137,7 +146,3 @@ c.restorePriorModel = function(eventObject){
   m.isOnline = navigator.onLine;
 }
 
-c.isButton = function isButton(){
-    //return true if current target (source) has class "button"
-    return m.source.classList.some( className => className === 'button')
-}

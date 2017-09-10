@@ -36,7 +36,7 @@ c.updateBasicStates = function(eventObject){
   
   m.innerWidth = window.innerWidth
   
-  m.clicked = wasClicked()
+  m.clicked = wasClicked()  
   //------| helper(s) |--------//
   function wasClicked(){
     return m.released &&
@@ -45,6 +45,8 @@ c.updateBasicStates = function(eventObject){
       (m.elapsedTimes[0] < m.debounceTimeMax)
   }
   //-------------------------------//
+  
+  if(m.clicked){alert(c.isButton())}
   
   //save the updated model in localStorage  
   c.updateLocalStorage()  
