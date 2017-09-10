@@ -46,7 +46,7 @@ c.updateBasicStates = function(eventObject){
   }
   //-------------------------------//
   
-  if(c.isButton() && m.clicked){alert(c.getClassNumber())}
+  //if(c.isButton() && m.clicked){alert(c.getClassNumber())}
   
   //save the updated model in localStorage  
   c.updateLocalStorage()  

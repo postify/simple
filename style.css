@@ -84,7 +84,7 @@ button{
   border-radius: 0.75rem;
   box-shadow: 0.1rem 0.1rem 1rem black;
   padding: 0.5rem;
-  background: hsla(180, 60%, 40%, 0.9);
+  background: lig;
 }
 .controls{
   width: 100%;
