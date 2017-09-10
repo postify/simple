@@ -70,6 +70,10 @@ button{
   font-size: 3.5rem;
   color: #111;
   font-weight: bold;
-  text-shadow: 0 1px 0 white;
-  
+  text-shadow: 0 1px 0 white;  
+}
+
+.player{
+  margin-bottom: 1rem;
+  width
 }
