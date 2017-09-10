@@ -25,6 +25,8 @@ body{
   font-family: sans-serif;
 }
 main{
+  position: absolute;
+  width: 100%;
   height: 100%;
   overflow: scroll;
 }
@@ -89,7 +91,7 @@ button{
   width: 98%;
   left: 50%;
   transform: translateX(-50%);
-  height: 120px;/*20%;*/
+  height: 20%;/*120px;*/
   border-radius: 0.75rem;
   box-shadow: 0.1rem 0.1rem 1rem black;
   padding: 0.5rem;

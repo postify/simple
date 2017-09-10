@@ -11,6 +11,10 @@ c.showEvents = function(){
   //const info = `TIME: ${(m.elapsedTimes[0]/1000).toFixed(2)},  PRIOR: ${(m.elapsedTimes[1]/1000).toFixed(2)}`
   v.info.innerText = info
 }
+//--------------------------
+c.showButtonClicked = function(){
+  
+}
 
 c.showRandomBackgroundColor = function(){
   v.main.styles(`background: ${m.randomBackgroundColor}`)  

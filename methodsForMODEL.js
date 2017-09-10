@@ -52,7 +52,7 @@ c.updateBasicStates = function(eventObject){
 
 //-------------------
 c.setEnterName = function(){
-  alert()
+  
 }
 c.setButtonClicked = function(){
   const playerNumber = c.getPlayerNumber()
@@ -66,7 +66,7 @@ c.setButtonClicked = function(){
     m.players[playerNumber].btnMinusPressed = true;
     m.players[playerNumber].score -= 1;    
   }
-  alert(playerNumber +  ': ' + m.players[playerNumber].score)
+  //alert(playerNumber +  ': ' + m.players[playerNumber].score)
 }
 
 //------------------
