@@ -34,9 +34,11 @@ c.showButtonClicked = function(){
       if(button.classList.contains('' + index)){
         button.classList.remove('btnOut')
         button.classList.add('btnIn')
+        button.style.background = (className === 'btnMinus')? 'red' : 'hsl(120, 100%, 75%)'
         setTimeout(function(){
           button.classList.remove('btnIn')
-          button.classList.add('btnOut')          
+          button.classList.add('btnOut')
+          button.style.background = 'white'
         }, m.TOGGLE_DELAY)
       }
     })   
@@ -77,8 +79,6 @@ c.showShroudVisible = function(){
       ('opacity: 1') 
       ('visibility: visible')
 }
-
-
 
 c.showOfflineStatus = function(){
   if(m.isOnline){

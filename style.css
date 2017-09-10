@@ -120,12 +120,9 @@ button{
   float: left;
   
 }
-.btnPlus:active
+
 .btnMinus{
   float: right
-}
-.btnMinus:active{
-  background: red;
 }
 
 .btnOut{
@@ -137,7 +134,7 @@ button{
 .btnIn{
   font-size: 1.5rem;  
   box-shadow: inset 0.1rem 0.1rem 0.2rem black;
-  //background: pink;
+  background: lightgray;
 }
 input{
   text-align: center;
