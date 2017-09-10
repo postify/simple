@@ -122,6 +122,9 @@ c.isButton = function isButton(){
     //return true if current target (source) is a member of class "button"
     return [...m.source.classList].some( className => className === 'button')
 }
+c.isTextInput = function(){
+   return [...m.source.classList].some( className => className === 'button')  
+}
 c.restorePriorModel = function(eventObject){
   if(localStorage && localStorage.getItem('m')){
     m = JSON.parse(localStorage.getItem('m'))// Use it, then ...
