@@ -78,40 +78,7 @@ c.showShroudVisible = function(){
       ('visibility: visible')
 }
 
-c.showPopup = function(){
-  v.popupHolder
-    .styles
-      ('opacity: 0.85') 
-      ('visibility: visible')  
-}
 
-c.showPopupToggle = function(){
-  if(m.popupIsVisible){
-    v.popupHolder
-      .styles
-        ('opacity: 0.85') 
-        ('visibility: visible')     
-  }
-  else if(!m.popupIsVisible){
-    v.popupHolder
-      .styles
-        ('opacity: 0') 
-        ('visibility: hidden')  
-  }
-}
-
-c.downloadCurrentImage = function(){
-  v.popupHolder
-      .styles
-        ('opacity: 0') 
-        ('visibility: hidden')   
-  m.popupIsVisible = false  
-  if(m.source === v.btnYes){
-    setTimeout(function(){
-      document.location.assign(m.currentImageUrl)       
-    }, 1)
-  }
-}
 
 c.showOfflineStatus = function(){
   if(m.isOnline){
@@ -122,16 +89,4 @@ c.showOfflineStatus = function(){
   }
 }
 
-c.showClearLocalStorage = function(){
-  if(m.btnClearLocalStorageIn){
-    v.btnClearLocalStorage.setAttribute('class', 'btnIn')
-    //alert("BEFORE:\n " + localStorage.getItem('m').replace(',','\n'))
-    localStorage.clear('m')
-    //alert("AFTER\n " + localStorage.getItem('m'))    
-  }
-  setTimeout(function(){
-    m.btnClearLocalStorageIn = false
-    v.btnClearLocalStorage.setAttribute('class', 'btnOut')    
-  }, 300)
 
-}

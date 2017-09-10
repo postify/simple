@@ -109,10 +109,7 @@ c.setResize = function(){
   c.updateLocalStorage()
 }
 
-c.setClearLocalStorage = function(){
-  m.btnClearLocalStorageIn = !m.btnClearLocalStorageIn
-  c.updateLocalStorage()  
-}
+
 
 c.updateLocalStorage = function(){
   if(localStorage){
@@ -124,8 +121,8 @@ c.updateLocalStorage = function(){
       catch(e){console.log(e)}
 
       localStorage.setItem('m', modelAsString)      
-      //console.log('\n\n\n')
-      //console.log(localStorage.getItem('m'))      
+      console.log('\n\n\n')
+      console.log(localStorage.getItem('m'))      
     },100)
   }
 }

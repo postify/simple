@@ -81,13 +81,11 @@ c.updateModel = function(eventObject){
   m.modelMethodQualifiers = {
     setEnterName:              [false],
     setButtonClicked:          [c.isButton(), m.clicked],
-    setPopupToggle:            [v.messageHolder === m.source, m.clicked, m.shroudIsVisible],
     setShroudVisible:          [(v.btn1 === m.source || v.btn2 === m.source), m.clicked],
     setShroudHidden:           [v.btnHideShroud === m.source, m.clicked],
     setRandomBackgroundColor:  [v.main === m.source, m.clicked],
     setOfflineStatus:          [m.type === 'online' || m.type === 'offline'],
     setResize:                 ['resize' === m.type],
-    setClearLocalStorage:      [v.btnClearLocalStorage === m.source, m.clicked],
   }
   L.runQualifiedMethods(m.modelMethodQualifiers, c, c.updateView)
 }

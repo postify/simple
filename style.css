@@ -59,7 +59,6 @@ button{
   right: 0;
   transition: all 2s ease;
   opacity: 0.97;
-  /*background-color: rgb(100, 100, 100);*/
   background: teal url(https://cdn.glitch.com/d2329b5c-8285-49d9-a412-4910e578e50e%2Fset175-175.jpg?1505007541585) no-repeat center;
   background-size: 30rem 30rem;
   visibility: visible;
@@ -121,8 +120,12 @@ button{
   float: left;
   
 }
+.btnPlus:active
 .btnMinus{
   float: right
+}
+.btnMinus:active{
+  background: red;
 }
 
 .btnOut{
@@ -134,7 +137,7 @@ button{
 .btnIn{
   font-size: 1.5rem;  
   box-shadow: inset 0.1rem 0.1rem 0.2rem black;
-  background: lightgray;
+  //background: pink;
 }
 input{
   text-align: center;
