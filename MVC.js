@@ -153,9 +153,19 @@ c.getPlayerNumber = function getClassNumber(){
 }
 
 c.isButton = function isButton(){
-    //return true if current target (source) is a member of class "button"
-    return [...m.source.classList].some( className => className === 'button')
+  //return true if current target (source) is a member of class "button"
+  let answer = false;
+  try{
+    let classArray = [...m.source.classList]    
+    answer = classArray.some( className => className === 'button')    
+  }
+  catch(e){
+    answer = false
+  }
+  return answer
 }
+
+//===
 c.isTextInput = function(){
    return [...m.source.classList].some( className => className === 'textInput')  
 }
