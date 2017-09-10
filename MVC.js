@@ -115,7 +115,8 @@ c.getClassNumber = function getClassNumber(){
   //all elements have a numeric class: find and return the number
   const classArray = [...m.source.classList]
   let classNumber;
-  classArray.forEach(className => typeOf)
+  classArray.forEach( className => !isNaN(parseInt(className)) ? classNumber = parseInt(className) : false )
+  return classNumber
 }
 c.isButton = function isButton(){
     //return true if current target (source) is a member of class "button"
