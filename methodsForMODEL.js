@@ -66,7 +66,7 @@ c.setButtonClicked = function(){
     m.players[playerNumber].btnMinusPressed = true;
     m.players[playerNumber].score -= 1;    
   }
-  alert(playerNumber +  ': ' + m.players[playerNumber].score)
+  //alert(playerNumber +  ': ' + m.players[playerNumber].score)
 }
 
 //------------------

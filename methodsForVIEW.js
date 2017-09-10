@@ -13,7 +13,15 @@ c.showEvents = function(){
 }
 //--------------------------
 c.showButtonClicked = function(){
-  
+  m.players.forEach((player, index) =>{
+    
+  })
+  //-------------| helper |--------------//
+  function toggleButton(index){
+    const buttonsArray = [...document.getElementsByClassName('button')]
+    bottonsArray.fo
+   
+  }
 }
 
 c.showRandomBackgroundColor = function(){

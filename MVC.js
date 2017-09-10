@@ -165,7 +165,7 @@ c.isButton = function isButton(){
   return answer
 }
 
-//===
+//---------------------
 c.isTextInput = function(){
    return [...m.source.classList].some( className => className === 'textInput')  
 }
