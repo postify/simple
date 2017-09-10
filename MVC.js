@@ -36,9 +36,7 @@ m.moveCount = 0
 //specialized states (these vary per application)
 m.debounceTimeMin = 25 //in milliseconds
 m.debounceTimeMax = 750 // milliseconds
-m.btn1In = false
-m.btn2In = false
-m.btnClearLocalStorageIn = false
+
 m.randomBackgroundColor = ""
 
 m.image1url = 'https://cdn.glitch.com/64ea24dd-529d-44b3-b288-d7bd5450effc%2FBaliFishermen.jpg?1504408500932'
@@ -72,6 +70,10 @@ c.updateView = function(){
     downloadCurrentImage: [v.btnYes === m.source || v.btnNo === m.source, m.clicked, m.shroudIsVisible] 
   }
   L.runQualifiedMethods(viewMethodQualifiers, c, "no callback needed here")
+  //==============| Helpers |==============//
+  function getClassNumber(){
+    //all elements have a numeric class: find the number
+  }
 }
 
 //============| INITIALIZE |================//
@@ -133,4 +135,9 @@ c.restorePriorModel = function(eventObject){
     v.popupHolder.styles('visibility: visible')('opacity: 0.85')    
   }
   m.isOnline = navigator.onLine;
+}
+
+c.isButton = function isButton(){
+    //return true if current target (source) has class "button"
+    return m.source.classList.some( className => className === 'button')
 }
