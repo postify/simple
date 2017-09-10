@@ -50,25 +50,25 @@ m.TOGGLE_DELAY = 250 //milliseconds
 
 m.players = [
   {
-    name: '',
+    name: 'Anwar',
     score: 0,
     btnPlusPressed: false,
     btnMinusPressed: false
   },
   {
-    name: '',
+    name: 'Layla',
     score: 0,
     btnPlusPressed: false,
     btnMinusPressed: false
   },
   {
-    name: '',
+    name: 'Linda',
     score: 0,
     btnPlusPressed: false,
     btnMinusPressed: false
   },
   {
-    name: '',
+    name: 'Abbas',
     score: 0,
     btnPlusPressed: false,
     btnMinusPressed: false
@@ -79,7 +79,7 @@ m.players = [
 c.updateModel = function(eventObject){
   c.updateBasicStates(eventObject)
   m.modelMethodQualifiers = {
-    setEnterName:              [false],
+    setEnterName:              [c.isTextInput(), m.clicked],
     setButtonClicked:          [c.isButton(), m.clicked],
     setShroudVisible:          [(v.btn1 === m.source || v.btn2 === m.source), m.clicked],
     setShroudHidden:           [v.btnHideShroud === m.source, m.clicked],

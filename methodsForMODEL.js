@@ -52,8 +52,9 @@ c.updateBasicStates = function(eventObject){
 
 //-------------------
 c.setEnterName = function(){
-  
+  alert()
 }
+//----------------------
 c.setButtonClicked = function(){
   const playerNumber = c.getPlayerNumber()
   if(m.source.classList.contains('btnPlus')){
@@ -66,7 +67,7 @@ c.setButtonClicked = function(){
     m.players[playerNumber].btnMinusPressed = true;
     m.players[playerNumber].score -= 1;    
   }
-  //alert(playerNumber +  ': ' + m.players[playerNumber].score)
+  c.updateLocalStorage()
 }
 
 //------------------
@@ -75,7 +76,7 @@ c.setRandomBackgroundColor = function(){
   m.randomBackgroundColor = `hsl(${angle}, 50%, 50%)`
   c.updateLocalStorage()  
 }
-
+//-------------------
 c.setShroudHidden = function (){
   m.shroudIsVisible = false
   m.popupIsVisible = false
@@ -83,17 +84,17 @@ c.setShroudHidden = function (){
   m.btn2In = false
   c.updateLocalStorage()  
 }
-
+//------------------
 c.setShroudVisible = function(){
   m.shroudIsVisible = true
   c.updateLocalStorage()  
 }
-
+//---------------------
 c.setPopupToggle = function(){
   m.popupIsVisible = !m.popupIsVisible
   c.updateLocalStorage()  
 }
-
+//--------------------
 c.setOfflineStatus = function(){
   if(m.type === 'online'){
     m.isOnline = true;
@@ -103,13 +104,12 @@ c.setOfflineStatus = function(){
   }
   c.updateLocalStorage()  
 }
-
+//---------------------
 c.setResize = function(){
   m.innerWidth = window.innerWidth
   c.updateLocalStorage()
 }
-
-
+//---------------------
 
 c.updateLocalStorage = function(){
   if(localStorage){
@@ -121,7 +121,7 @@ c.updateLocalStorage = function(){
       catch(e){console.log(e)}
 
       localStorage.setItem('m', modelAsString)      
-      console.log('\n\n\n')
+      console.log('\n\n')
       console.log(localStorage.getItem('m'))      
     },100)
   }
