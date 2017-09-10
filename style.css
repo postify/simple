@@ -26,6 +26,7 @@ body{
 }
 main{
   height: 100%;
+  overflow: scroll;
 }
 footer{
   position: fixed;
@@ -81,16 +82,18 @@ button{
 }
 
 /*============| player styles |=============*/
-.player{  
+.player{
+  position: relative;
   text-align: center;
   margin-bottom: 0.75rem;
-  width: 99%;
-  height: 20%;
+  width: 98%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 120px;/*20%;*/
   border-radius: 0.75rem;
   box-shadow: 0.1rem 0.1rem 1rem black;
   padding: 0.5rem;
   background: lightblue;
-  overflow: hidden;
 }
 .controls{
   width: 100%;

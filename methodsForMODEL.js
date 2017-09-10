@@ -51,6 +51,9 @@ c.updateBasicStates = function(eventObject){
 }
 
 //-------------------
+c.setEnterName = function(){
+  alert()
+}
 c.setButtonClicked = function(){
   const playerNumber = c.getPlayerNumber()
   if(m.source.classList.contains('btnPlus')){
