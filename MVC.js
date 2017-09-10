@@ -110,7 +110,7 @@ c.initialize = function(eventObject){
       setTimeout(function(){
         v.shroud
           .styles
-            ('transition: all 0s ease')
+            ('transition: all 0.25s ease')
     }, 2000)
   }, 2000)
   
