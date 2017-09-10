@@ -92,7 +92,7 @@ button{
   transform: translateX(-50%);
   height: 20%;/*120px;*/
   border-radius: 0.75rem;
-  box-shadow: 0.1rem 0.1rem 1rem black;
+  box-shadow: 0.1rem 0.1rem 0.3rem black;
   padding: 0.5rem;
   background: lightblue;
 }

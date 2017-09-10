@@ -138,6 +138,31 @@ c.initialize = function(eventObject){
 //============| END of INITIALIZE |================//
 
 //==============| Helpers |==============//
+c.restorePriorModel = function(eventObject){
+  if(localStorage && localStorage.getItem('m')){
+    m = JSON.parse(localStorage.getItem('m'))
+    console.log('locally stored m:', localStorage.getItem('m'))
+  }  
+  
+  m.players.forEach((player, index)=>{
+    const scoresArray = [...document.getElementsByClassName('score')]
+    scoresArray.forEach( scoreHolder => {
+      if(scoreHolder.classList.contains('' + index)){
+        scoreHolder.value = m.players[index].score        
+      }
+    })  
+  })
+  m.players.forEach((player, index)=>{
+    const scoresArray = [...document.getElementsByClassName('textInput')]
+    scoresArray.forEach( scoreHolder => {
+      if(scoreHolder.classList.contains('' + index)){
+        scoreHolder.value = m.players[index].name       
+      }
+    })  
+  })  
+  m.isOnline = navigator.onLine;
+}
+//----------------------------
 c.getClassNumber = function getClassNumber(){
   //all elements have a numeric class: find and return the number
   const classArray = [...m.source.classList]
@@ -170,31 +195,5 @@ c.isButton = function isButton(){
 c.isTextInput = function(){
    return [...m.source.classList].some( className => className === 'textInput')  
 }
-c.restorePriorModel = function(eventObject){
-  if(localStorage && localStorage.getItem('m')){
-    m = JSON.parse(localStorage.getItem('m'))// Use it, then ...
-    localStorage.removeItem('m') // ... lose it.
-    console.log('locally stored m:', localStorage.getItem('m'))
-  }
-  
-  
-  ;[0,1,2,3].forEach(index=>{
-    const scoresArray = [...document.getElementsByClassName('score')]
-    scoresArray.forEach( scoreHolder => {
-      if(scoreHolder.classList.contains('' + index)){
-        scoreHolder.value = m.players[index].score        
-      }
-    })  
-  })
-  ;[0,1,2,3].forEach(index=>{
-    const scoresArray = [...document.getElementsByClassName('textInput')]
-    scoresArray.forEach( scoreHolder => {
-      if(scoreHolder.classList.contains('' + index)){
-        scoreHolder.value = m.players[index].name       
-      }
-    })  
-  })  
-  
-  m.isOnline = navigator.onLine;
-}
+
 
