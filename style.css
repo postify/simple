@@ -142,7 +142,7 @@ input{
 }
 input[type=text]{
   display: inline-block;  
-  width: 100%;
+  width: 90%;
   background: #eee;
 }
 input[type=number]{
