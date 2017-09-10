@@ -14,13 +14,22 @@ c.showEvents = function(){
 //--------------------------
 c.showButtonClicked = function(){
   m.players.forEach((player, index) =>{
+    toggleButton(index)
     
   })
   //-------------| helper |--------------//
   function toggleButton(index){
     const buttonsArray = [...document.getElementsByClassName('button')]
-    bottonsArray.fo
-   
+    buttonsArray.forEach(button => {
+      if(button.classListContains(index)){
+        button.classList.remove('btnOut')
+        button.classList.add('btnIn')
+        setTimeout(function(){
+          button.classList.remove('btnIn')
+          button.classList.add('btnOut')          
+        }, m.TOGGLE_DELAY)
+      }
+    })   
   }
 }
 
