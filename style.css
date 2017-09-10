@@ -78,8 +78,8 @@ button{
 /*============| player styles |=============*/
 .player{  
   text-align: center;
-  margin-bottom: 0.5rem;
-  width: 100%;
+  margin-bottom: 0.75rem;
+  width: 99%;
   height: 20%;
   border-radius: 0.75rem;
   box-shadow: 0.1rem 0.1rem 1rem black;
@@ -98,8 +98,7 @@ button{
   line-height: 2;
   border-radius: 0.25rem;
   margin-top: 0.25rem; 
-
-    
+  cursor: pointer;    
 }
 .buttonHolder{
   position: absolute;
@@ -132,4 +131,11 @@ input{
 input[type=text]{
   display: inline-block;  
   width: 100%;
+  background: #eee;
+}
+input[type=number]{
+  display: inline-block;  
+  width: 32%;
+  font-weight: bold;
+  margin-top: 0.25rem;
 }
