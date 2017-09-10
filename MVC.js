@@ -82,6 +82,7 @@ c.initialize = function(eventObject){
   
   setTimeout(function(){  
     v.messageText.styles('visibility: hidden')('opacity: 0')
+    v.shroud.styles('visibility: hidden')('opacity: 0')    
   }, 2000)
   
   //for apple devices
@@ -124,7 +125,8 @@ c.restorePriorModel = function(eventObject){
     if(prefix === 'set' && c[newMethodName]){
       c[newMethodName]()
     }    
-  })  
+  })
+  
   if(m.shroudIsVisible){
     v.shroud.styles('visibility: visible')('opacity: 1')
   }

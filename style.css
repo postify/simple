@@ -11,28 +11,18 @@ html{
   tap-highlight-color:  rgba(255, 255, 255, 0);   
 }
 body{
+  position: fixed;
   height: 100%;
+  width: 100%;
   margin: 0;
-  padding: 0;
+  padding: 0;  
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background: thistle;
   text-align: center;
   font-family: sans-serif;
-}
-
-main {
-  position: fixed;
-  height: 98%;
-  width: 85%;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  margin: 0;
-  padding: 0;  
-  font-family: helvetica, arial, sans-serif;
-  box-shadow: 10px 10px 30px gray;
-  border-radius: 0.5rem;
-  background:  hsla(258, 32%, 50%, 1.00);
-  overflow: hidden;
 }
 
 footer{
@@ -50,36 +40,8 @@ footer{
 button{
   margin: 0.5rem;
   font-size: 1.5rem;
-  //outline: none;
   border-radius: 0.25rem;
   cursor: pointer;
-}
-
-button:hover{
-  color: black;
-  background: white;
-}
-
-.btnOut{
-  box-shadow: 3px 3px 3px black;
-  background-color: white;
-  color: gray;
-  text-shadow: 0 1px 0 black;  
-}
-
-.btnIn{
-  box-shadow: inset 3px 3px 3px black;
-  background-color: lightgray;
-  color: black;
-  text-shadow: 0 1px 0 white;
-}
-
-#btnHolder{
-  position: absolute;
-  width: 100%;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);  
 }
 
 #shroud{
@@ -98,70 +60,3 @@ button:hover{
   overflow: hidden;
 }
 
-#btnHideShroud{
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
-  color: red;
-  font-size: 2rem;
-  font-weight: bold;
-  height: 3.2rem;
-  width: 3.2rem;
-  text-align: center;
-  border-radius: 50%;
-  box-shadow:  0 0 15px black;
-  cursor: pointer;
-  line-height: 1.5;
-  text-shadow: 0 1px 0 lightgray;
-  background: linear-gradient(45deg, lightblue, lightgray);
-}
-
-#messageHolder{
-  position: absolute;
-  height: 90%;
-  width: 90%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 0.85rem;
-}
-
-#popupHolder{
-  position: fixed;
-  padding: 2rem;
-  width:75%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 0.85rem;
-  box-shadow: 0 0 1.5rem black;
-  background: #ddd;
-  text-align: center;
-  opacity: 0;
-  visibility: hidden;
-  font-size: 1.5rem;
-  text-shadow: 0 1px 0 white;
-  transition: all 0.5s ease;  
-}
-
-#offlineMessage{
-  display: inline-block;
-  position: fixed;
-  top: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
-  color: transparent;
-  font-size: 2rem;
-  font-family: sans-serif;
-  z-index: 3;
-}
-
-#messageText{
-  display: inline-block;
-  color: white;
-  text-shadow: 0 1px 0 black;
-  font-size: 2rem;
-  visibility: visible;
-  opacity: 1;
-  transition: all 2s ease
-}
