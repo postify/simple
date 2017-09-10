@@ -51,7 +51,17 @@ c.updateBasicStates = function(eventObject){
 }
 
 //-------------------
-
+c.setButtonClicked = function(){
+  const playerNumber = c.getPlayerNumber()
+  if(m.source.classList.contains('btnPlus')){
+    m.players[playerNumber].btnPlusPressed = true;
+    m.players[playerNumber].btnMinusPressed = false;
+    m.players[playerNumber].score += 1;
+  }
+  else if (m.source.classList.contains('btnMinus')){
+    
+  }
+}
 c.setRandomBackgroundColor = function(){
   const angle = 360 * Math.random()
   m.randomBackgroundColor = `hsl(${angle}, 50%, 50%)`
