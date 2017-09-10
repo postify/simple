@@ -107,7 +107,7 @@ c.setOfflineStatus = function(){
 //---------------------
 c.setResize = function(){
   m.innerWidth = window.innerWidth
-  c.updateLocalStorage()
+  //c.updateLocalStorage()
 }
 //---------------------
 
