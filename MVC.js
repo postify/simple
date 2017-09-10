@@ -45,6 +45,16 @@ m.currentImageUrl = ''
 
 m.modelMethodQualifiers = {}
 m.innerWidth = window.innerWidth;
+m.players = [
+  {
+    name: '',
+    score: 0,
+    
+  },
+  {},
+  {},
+  {},
+]
 
 //===========| UPDATE MODEL |===========//
 c.updateModel = function(eventObject){
@@ -123,7 +133,7 @@ c.isButton = function isButton(){
     return [...m.source.classList].some( className => className === 'button')
 }
 c.isTextInput = function(){
-   return [...m.source.classList].some( className => className === 'button')  
+   return [...m.source.classList].some( className => className === 'textInput')  
 }
 c.restorePriorModel = function(eventObject){
   if(localStorage && localStorage.getItem('m')){
