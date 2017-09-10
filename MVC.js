@@ -39,10 +39,6 @@ m.debounceTimeMax = 750 // milliseconds
 
 m.randomBackgroundColor = ""
 
-m.image1url = 'https://cdn.glitch.com/64ea24dd-529d-44b3-b288-d7bd5450effc%2FBaliFishermen.jpg?1504408500932'
-m.image2url = 'https://cdn.glitch.com/64ea24dd-529d-44b3-b288-d7bd5450effc%2FJapan.jpg?1504325351040'
-m.currentImageUrl = ''
-
 m.modelMethodQualifiers = {}
 m.innerWidth = window.innerWidth;
 

@@ -106,7 +106,7 @@ c.setOfflineStatus = function(){
 }
 //---------------------
 c.setResize = function(){
-  m.innerWidth = window.innerWidth
+  //m.innerWidth = window.innerWidth
   //c.updateLocalStorage()
 }
 //---------------------
@@ -121,7 +121,7 @@ c.updateLocalStorage = function(){
       catch(e){console.log(e)}
 
       localStorage.setItem('m', modelAsString)      
-      console.log('\n\n')
+      console.log('========(SEPARATOR LINE)========\n')
       console.log(localStorage.getItem('m'))      
     },100)
   }
