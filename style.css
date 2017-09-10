@@ -24,7 +24,9 @@ body{
   text-align: center;
   font-family: sans-serif;
 }
-
+main{
+  height: 100%;
+}
 footer{
   position: fixed;
   width: 100%;
@@ -57,7 +59,7 @@ button{
   /*background-color: rgb(100, 100, 100);*/
   background: teal url(https://cdn.glitch.com/d2329b5c-8285-49d9-a412-4910e578e50e%2Fset175-175.jpg?1505007541585) no-repeat center;
   background-size: 30rem 30rem;
-  visibility: visible;
+  visibility: hidden;
   overflow: hidden;
 }
 
@@ -74,23 +76,28 @@ button{
 }
 
 /*============| player styles |=============*/
-.player{
+.player{  
   text-align: center;
   margin-bottom: 1rem;
   width: 100%;
+  height: 20%;
   border-radius: 0.75rem;
   box-shadow: 0.1rem 0.1rem 1rem black;
   padding: 0.5rem;
 }
 .button{
-  
-}
-.buttonHolder{
-  width: 75%;
-}
-.btnPlus{
+  display: inline-block;
   width: 50%;
   border: 1px solid black;
+}
+.buttonHolder{
+  width: 75%;  
+}
+.btnPlus{
+  float: left;
+}
+.btnMinus{
+  float: right
 }
 input{
   text-align: center;
