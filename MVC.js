@@ -76,7 +76,6 @@ c.updateView = function(){
 
 //============| INITIALIZE |================//
 c.initialize = function(eventObject){  
-  //attach "id"-ed elements to our view object (after giving window its own id)
   window.id = 'window'
   L.attachAllElementsById(v)
   
