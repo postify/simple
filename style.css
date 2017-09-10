@@ -84,7 +84,7 @@ button{
   border-radius: 0.75rem;
   box-shadow: 0.1rem 0.1rem 1rem black;
   padding: 0.5rem;
-  background: hsla(18);
+  background: hsla(180, 60%, 40%, 0.9);
 }
 .controls{
   width: 100%;
@@ -109,12 +109,15 @@ button{
 }
 .btnPlus{
   float: left;
+  
 }
 .btnMinus{
   float: right
 }
 input{
   text-align: center;
+  font-size: 1.5
+    rem;
 }
 input[type=text]{
   display: inline-block;  
