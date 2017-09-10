@@ -46,7 +46,7 @@ m.currentImageUrl = ''
 m.modelMethodQualifiers = {}
 m.innerWidth = window.innerWidth;
 
-m.TOGGLE_DELAY = 250 //milliseconds
+m.TOGGLE_DELAY = 125 //milliseconds
 
 m.players = [
   {
