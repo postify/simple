@@ -63,10 +63,7 @@ c.showShroudHidden = function (){
     .styles
       ('opacity: 0')
       ('visibility: hidden')
-  v.popupHolder
-    .styles
-      ('opacity: 0') 
-      ('visibility: hidden')  
+ 
   setTimeout(function(){
     c.showBtn1Toggle()
     c.showBtn2Toggle()     
@@ -75,6 +72,9 @@ c.showShroudHidden = function (){
 
 c.showEnterName = function(){
   c.showShroudVisible()
+  v.nameInput
+    .styles
+      ('visibility: visible')
   v.nameInput.value = m.source.value
 }
 

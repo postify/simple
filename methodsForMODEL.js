@@ -3,7 +3,7 @@
 /*global v*/
 /*global c*/
 
-//===| functions that UPDATE MODEL |========//
+//========| functions that UPDATE MODEL |========//
 c.updateBasicStates = function(eventObject){
   
   m.priorStartTime = m.startTime
@@ -52,8 +52,7 @@ c.updateBasicStates = function(eventObject){
 
 //-------------------
 c.setEnterName = function(){
-  c.setShroudVisible()
-  
+  c.setShroudVisible()  
 }
 //----------------------
 c.setButtonClicked = function(){
@@ -79,7 +78,7 @@ c.setRandomBackgroundColor = function(){
 }
 //-------------------
 c.setShroudHidden = function (){
-  m.shroudIsVisible = false
+  m.shroudIsVisible = false  
   c.updateLocalStorage()  
 }
 //------------------
