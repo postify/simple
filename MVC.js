@@ -92,7 +92,7 @@ c.updateView = function(){
     showEvents: [false],
     downloadCurrentImage: [v.btnYes === m.source || v.btnNo === m.source, m.clicked, m.shroudIsVisible] 
   }
-  L.runQualifiedMethods(viewMethodQualifiers, c, "no callback needed here")
+  L.runQualifiedMethods(viewMethodQualifiers, c, c.updateLocalStorage)
 
 }
 
