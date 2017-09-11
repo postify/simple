@@ -63,6 +63,11 @@ c.showShroudHidden = function (){
     .styles
       ('opacity: 0')
       ('visibility: hidden')
+    v.nameInput
+    .styles
+      ('opacity: 0')
+      ('visibility: hidden')
+  
 }
 
 c.showEnterName = function(){
@@ -70,6 +75,7 @@ c.showEnterName = function(){
   v.nameInput
     .styles
       ('visibility: visible')
+      ('opacity: 1')
   v.nameInput.value = m.source.value
 }
 

@@ -75,11 +75,11 @@ m.currentPlayerNumber = 0;
 c.updateModel = function(eventObject){
   c.updateBasicStates(eventObject)
   m.modelMethodQualifiers = {
+    setShroudHidden:           [v.btnHideShroud === m.source, m.clicked],    
     setEnterName:              [c.isTextInput(), m.clicked],
-    setUpdateName:             [v.nameInput === m.source``],
+    setUpdateName:             [v.nameInput === m.source, m.type === 'keyup'],
     setButtonClicked:          [c.isButton(), m.clicked],
     setShroudVisible:          [(v.btn1 === m.source || v.btn2 === m.source), m.clicked],
-    setShroudHidden:           [v.btnHideShroud === m.source, m.clicked],
     setRandomBackgroundColor:  [v.main === m.source, m.clicked],
     setOfflineStatus:          [m.type === 'online' || m.type === 'offline'],
     setResize:                 ['resize' === m.type],
@@ -111,7 +111,7 @@ c.initialize = function(eventObject){
       setTimeout(function(){
         v.shroud
           .styles
-            ('transition: all 0.2s ease')
+            ('transition: all 0.25s ease')
             ('background: hsla(180, 50%, 50%, 0.9)')
         v.nameInput
           .styles

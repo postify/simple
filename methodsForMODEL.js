@@ -49,6 +49,11 @@ c.updateBasicStates = function(eventObject){
   //save the updated model in localStorage  
   c.updateLocalStorage()  
 }
+//-----------------
+c.setUpdateName = function(){
+  
+}
+
 
 //-------------------
 c.setEnterName = function(){
@@ -79,7 +84,8 @@ c.setRandomBackgroundColor = function(){
 }
 //-------------------
 c.setShroudHidden = function (){
-  m.shroudIsVisible = false  
+  m.shroudIsVisible = false
+  
   c.updateLocalStorage()  
 }
 //------------------
