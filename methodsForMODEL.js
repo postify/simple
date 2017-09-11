@@ -97,7 +97,8 @@ c.setShroudHidden = function (){
 }
 //------------------
 c.setShroudVisible = function(){
-  m.shroudIsVisible = true  
+  m.shroudIsVisible = true
+  v.nameInput.focus()  
   c.updateLocalStorage()  
 }
 //---------------------
