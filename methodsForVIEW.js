@@ -63,11 +63,7 @@ c.showShroudHidden = function (){
     .styles
       ('opacity: 0')
       ('visibility: hidden')
- 
-  setTimeout(function(){
-    c.showBtn1Toggle()
-    c.showBtn2Toggle()     
-  }, 500) 
+      ('background: hsla(180, 50%, 50%, 0.9)')
 }
 
 c.showEnterName = function(){
