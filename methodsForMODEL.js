@@ -61,6 +61,7 @@ c.setUpdateName = function(){
 
 //-------------------
 c.setEnterName = function(){
+  v.nameInput.focus()
   m.currentPlayerNumber = c.getPlayerNumber()
   m.players[m.currentPlayerNumber].name = m.source.value
   c.updateLocalStorage()
