@@ -70,12 +70,13 @@ m.players = [
     btnMinusPressed: false
   },
 ]
-
+m.currentPlayerNumber = 0;
 //===========| UPDATE MODEL |===========//
 c.updateModel = function(eventObject){
   c.updateBasicStates(eventObject)
   m.modelMethodQualifiers = {
     setEnterName:              [c.isTextInput(), m.clicked],
+    setUpdateName:             [v.nameInput === m.source``],
     setButtonClicked:          [c.isButton(), m.clicked],
     setShroudVisible:          [(v.btn1 === m.source || v.btn2 === m.source), m.clicked],
     setShroudHidden:           [v.btnHideShroud === m.source, m.clicked],

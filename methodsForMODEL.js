@@ -52,6 +52,7 @@ c.updateBasicStates = function(eventObject){
 
 //-------------------
 c.setEnterName = function(){
+  m.currentPlayerNumber = c.getPlayerNumber()
   c.setShroudVisible()  
 }
 //----------------------
