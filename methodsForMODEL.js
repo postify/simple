@@ -51,7 +51,7 @@ c.updateBasicStates = function(eventObject){
 }
 //-----------------
 c.setUpdateName = function(){
-  m.players[m.currentPlayerNumber].name = v.inputName.value
+  m.players[m.currentPlayerNumber].name = v.nameInput.value
 }
 
 
@@ -125,8 +125,8 @@ c.updateLocalStorage = function(){
       catch(e){console.log(e)}
 
       localStorage.setItem('m', modelAsString)      
-      //console.log('========(SEPARATOR LINE)========\n')
-      //console.log(localStorage.getItem('m'))      
+      console.log('========(SEPARATOR LINE)========\n')
+      console.log(localStorage.getItem('m'))      
     },100)
   }  
 }

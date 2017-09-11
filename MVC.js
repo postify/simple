@@ -214,7 +214,6 @@ c.isTextInput = function(){
   }
   catch(e) {
     answer = false
-    //console.log(e)
   }
   return answer 
 }

@@ -53,6 +53,10 @@ c.showButtonClicked = function(){
     })
   }
 }
+c.showUpdateName = function(){
+  v.nameInput.value = m.players[m.currentPlayerNumber].name 
+}
+
 
 c.showRandomBackgroundColor = function(){
   v.main.styles(`background: ${m.randomBackgroundColor}`)  
