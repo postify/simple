@@ -54,7 +54,15 @@ c.showButtonClicked = function(){
   }
 }
 c.showUpdateName = function(){
-  v.nameInput.value = m.players[m.currentPlayerNumber].name 
+  let index = m.currentPlayerNumber
+  m.players.forEach((player, index)=>{
+    const namesArray = [...document.getElementsByClassName('textInput')]
+    namesArray.forEach( nameHolder => {
+      if(nameHolder.classList.contains('' + index)){
+        nameHolder.value = m.players[index].name       
+      }
+    })  
+  })  
 }
 
 

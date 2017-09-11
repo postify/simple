@@ -168,10 +168,10 @@ c.restorePriorModel = function(eventObject){
     })  
   })
   m.players.forEach((player, index)=>{
-    const scoresArray = [...document.getElementsByClassName('textInput')]
-    scoresArray.forEach( scoreHolder => {
-      if(scoreHolder.classList.contains('' + index)){
-        scoreHolder.value = m.players[index].name       
+    const namesArray = [...document.getElementsByClassName('textInput')]
+    namesArray.forEach( nameHolder => {
+      if(nameHolder.classList.contains('' + index)){
+        nameHolder.value = m.players[index].name       
       }
     })  
   })  
@@ -185,6 +185,7 @@ c.getClassNumber = function getClassNumber(){
   classArray.forEach( className => !isNaN(parseInt(className)) ? classNumber = parseInt(className) : false )
   return classNumber
 }
+//---| an alias name for the same function above |-----//
 c.getPlayerNumber = function getClassNumber(){
   //all elements have a numeric class: find and return the number
   const classArray = [...m.source.classList]
