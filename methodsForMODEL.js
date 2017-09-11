@@ -35,7 +35,7 @@ c.updateBasicStates = function(eventObject){
   m.moveCount = m.moved ? ++m.moveCount : 0
   
   m.innerWidth = window.innerWidth
-  
+  m.isEnterKey = false
   m.clicked = wasClicked()  
   //------| helper(s) |--------//
   function wasClicked(){
@@ -45,7 +45,12 @@ c.updateBasicStates = function(eventObject){
       (m.elapsedTimes[0] < m.debounceTimeMax)
   }
   //-------------------------------// 
-  
+  function wasEnterKey(){
+    if(m.type === 'keyup'){
+      
+    }
+  }
+  //-------------------------------//
   //save the updated model in localStorage  
   c.updateLocalStorage()  
 }

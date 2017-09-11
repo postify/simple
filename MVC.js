@@ -79,7 +79,6 @@ c.updateModel = function(eventObject){
     setEnterName:              [c.isTextInput(), m.clicked],
     setUpdateName:             [v.nameInput === m.source, m.type === 'keyup'],
     setButtonClicked:          [c.isButton(), m.clicked],
-    setShroudVisible:          [(v.btn1 === m.source || v.btn2 === m.source), m.clicked],
     setRandomBackgroundColor:  [v.main === m.source, m.clicked],
     setOfflineStatus:          [m.type === 'online' || m.type === 'offline'],
     setResize:                 ['resize' === m.type],

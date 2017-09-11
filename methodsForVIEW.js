@@ -122,7 +122,7 @@ c.updateLocalStorage = function(){
       catch(e){console.log(e)}
 
       localStorage.setItem('m', modelAsString)      
-      console.log('========(SEPARATOR LINE)========\n')
+      console.log('============================\n')
       console.log(localStorage.getItem('m'))      
     },100)
   }  
