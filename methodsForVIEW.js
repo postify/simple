@@ -66,6 +66,9 @@ c.showUpdateName = function(){
     })  
   })
   c.updateLocalStorage()
+  if(m.isEnterKey){
+    c.showShroudHidden()
+  }
 }
 //--------------------------
 c.showRandomBackgroundColor = function(){
