@@ -89,7 +89,7 @@ c.updateModel = function(eventObject){
 //===========| UPDATE VIEW |===========//
 c.updateView = function(){
   const viewMethodQualifiers = {
-    showEvents: [true],
+    showEvents: [false],
     downloadCurrentImage: [v.btnYes === m.source || v.btnNo === m.source, m.clicked, m.shroudIsVisible] 
   }
   L.runQualifiedMethods(viewMethodQualifiers, c, "no callback needed here")
@@ -110,7 +110,16 @@ c.initialize = function(eventObject){
       setTimeout(function(){
         v.shroud
           .styles
-            ('transition: all 0.25s ease')
+            ('transition: all 0.2s ease')
+            ('background: hsla(180, 50%, 50%, 0.9)')
+        v.nameInput
+          .styles
+            ('visibility: visible')
+            ('display: inline-block')
+            ('padding: 1rem')
+            ('font-size: 2rem')
+            ('')
+        
     }, 2000)
   }, 2000)
   

@@ -63,7 +63,6 @@ c.showShroudHidden = function (){
     .styles
       ('opacity: 0')
       ('visibility: hidden')
-      ('background: hsla(180, 50%, 50%, 0.9)')
 }
 
 c.showEnterName = function(){
