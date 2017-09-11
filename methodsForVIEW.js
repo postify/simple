@@ -91,6 +91,7 @@ c.showEnterName = function(){
       ('visibility: visible')
       ('opacity: 1')
   v.nameInput.value = m.source.value
+  c.updateLocalStorage()
 }
 
 c.showShroudVisible = function(){

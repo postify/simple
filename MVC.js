@@ -165,7 +165,8 @@ c.restorePriorModel = function(eventObject){
       if(scoreHolder.classList.contains('' + index)){
         scoreHolder.value = m.players[index].score        
       }
-    })  
+    })
+    c.updateLocalStorage()
   })
   m.players.forEach((player, index)=>{
     const namesArray = [...document.getElementsByClassName('textInput')]
@@ -173,7 +174,8 @@ c.restorePriorModel = function(eventObject){
       if(nameHolder.classList.contains('' + index)){
         nameHolder.value = m.players[index].name       
       }
-    })  
+    }) 
+    c.updateLocalStorage()
   })  
   m.isOnline = navigator.onLine;
 }

@@ -58,6 +58,8 @@ c.setUpdateName = function(){
 //-------------------
 c.setEnterName = function(){
   m.currentPlayerNumber = c.getPlayerNumber()
+  m.players[m.currentPlayerNumber].name = m.source.value
+  c.updateLocalStorage()
   c.setShroudVisible()  
 }
 //----------------------
