@@ -9,6 +9,7 @@ html{
   user-select: none;
   font-size: calc(calc(0.35vh + 0.35vw) + 10px);
   tap-highlight-color:  rgba(255, 255, 255, 0);   
+  user-select: none;
 }
 body{
   position: fixed;
