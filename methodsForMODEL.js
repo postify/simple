@@ -92,7 +92,7 @@ c.setShroudHidden = function (){
 }
 //------------------
 c.setShroudVisible = function(){
-  m.shroudIsVisible = true
+  m.shroudIsVisible = true  
   c.updateLocalStorage()  
 }
 //---------------------

@@ -86,6 +86,7 @@ c.showShroudHidden = function (){
 
 c.showEnterName = function(){
   c.showShroudVisible()
+  v.nameInput.focus()
   v.nameInput
     .styles
       ('visibility: visible')
@@ -95,6 +96,7 @@ c.showEnterName = function(){
 }
 
 c.showShroudVisible = function(){
+  v.nameInput.focus()
   v.shroud
     .styles
       ('opacity: 1') 
