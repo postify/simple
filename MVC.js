@@ -46,25 +46,25 @@ m.TOGGLE_DELAY = 125 //milliseconds
 
 m.players = [
   {
-    name: 'Anwar',
+    name: '',
     score: 0,
     btnPlusPressed: false,
     btnMinusPressed: false
   },
   {
-    name: 'Layla',
+    name: '',
     score: 0,
     btnPlusPressed: false,
     btnMinusPressed: false
   },
   {
-    name: 'Linda',
+    name: '',
     score: 0,
     btnPlusPressed: false,
     btnMinusPressed: false
   },
   {
-    name: 'Abbas',
+    name: '',
     score: 0,
     btnPlusPressed: false,
     btnMinusPressed: false

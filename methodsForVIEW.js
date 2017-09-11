@@ -52,7 +52,9 @@ c.showButtonClicked = function(){
       }
     })
   }
+  c.updateLocalStorage()
 }
+//---------------------------
 c.showUpdateName = function(){
   let index = m.currentPlayerNumber
   m.players.forEach((player, index)=>{
@@ -62,10 +64,10 @@ c.showUpdateName = function(){
         nameHolder.value = m.players[index].name       
       }
     })  
-  })  
+  })
+  c.updateLocalStorage()
 }
-
-
+//--------------------------
 c.showRandomBackgroundColor = function(){
   v.main.styles(`background: ${m.randomBackgroundColor}`)  
 }
@@ -107,4 +109,18 @@ c.showOfflineStatus = function(){
   }
 }
 
+c.updateLocalStorage = function(){  
+  if(localStorage){
+    setTimeout(function(){
+      let modelAsString=''
+      try{
+         modelAsString = JSON.stringify(m)        
+      }
+      catch(e){console.log(e)}
 
+      localStorage.setItem('m', modelAsString)      
+      console.log('========(SEPARATOR LINE)========\n')
+      console.log(localStorage.getItem('m'))      
+    },100)
+  }  
+}

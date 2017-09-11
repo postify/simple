@@ -115,18 +115,3 @@ c.setResize = function(){
 }
 //---------------------
 
-c.updateLocalStorage = function(){  
-  if(localStorage){
-    setTimeout(function(){
-      let modelAsString=''
-      try{
-         modelAsString = JSON.stringify(m)        
-      }
-      catch(e){console.log(e)}
-
-      localStorage.setItem('m', modelAsString)      
-      console.log('========(SEPARATOR LINE)========\n')
-      console.log(localStorage.getItem('m'))      
-    },100)
-  }  
-}
