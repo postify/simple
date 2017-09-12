@@ -187,13 +187,7 @@ c.getClassNumber = function getClassNumber(){
   return classNumber
 }
 //---| an alias name for the same function above |-----//
-c.getPlayerNumber = function getClassNumber(){
-  //all elements have a numeric class: find and return the number
-  const classArray = [...m.source.classList]
-  let classNumber;
-  classArray.forEach( className => !isNaN(parseInt(className)) ? classNumber = parseInt(className) : false )
-  return classNumber
-}
+c.getPlayerNumber = c.getClassNumber
 
 c.isButton = function isButton(){
   //return true if current target (source) is a member of class "button"
