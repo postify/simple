@@ -83,8 +83,7 @@ c.showShroudHidden = function (){
     v.nameInput
     .styles
       ('opacity: 0')
-      ('visibility: hidden')
-  
+      ('visibility: hidden')  
 }
 
 c.showEnterName = function(){
@@ -104,6 +103,10 @@ c.showShroudVisible = function(){
     .styles
       ('opacity: 1') 
       ('visibility: visible')
+  v.nameInput
+    .styles
+      ('opacity: 1')
+      ('visibility: visible')  
 }
 
 c.showOfflineStatus = function(){
