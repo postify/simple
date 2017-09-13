@@ -30,7 +30,6 @@ m.clicked = false
 
 m.isOnline = true
 m.shroudIsVisible = false
-m.popupIsVisible = false
 m.moveCount = 0
 
 //specialized states (these vary per application)

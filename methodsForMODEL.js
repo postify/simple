@@ -58,7 +58,6 @@ c.setUpdateName = function(){
   m.players[m.currentPlayerNumber].name = v.nameInput.value
 }
 
-
 //-------------------
 c.setEnterName = function(){
   v.nameInput.focus()
@@ -91,22 +90,17 @@ c.setRandomBackgroundColor = function(){
 }
 //-------------------
 c.setShroudHidden = function (){
-  m.shroudIsVisible = false
-  
+  m.shroudIsVisible = false  
   c.updateLocalStorage()  
 }
 //------------------
 c.setShroudVisible = function(){
   m.shroudIsVisible = true
   v.nameInput.focus()  
-  c.updateLocalStorage()  
+  //c.updateLocalStorage()  
 }
 //---------------------
-c.setPopupToggle = function(){
-  m.popupIsVisible = !m.popupIsVisible
-  c.updateLocalStorage()  
-}
-//--------------------
+
 c.setOfflineStatus = function(){
   if(m.type === 'online'){
     m.isOnline = true;

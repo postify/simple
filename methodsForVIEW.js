@@ -115,7 +115,8 @@ c.showOfflineStatus = function(){
   }
 }
 
-c.updateLocalStorage = function(){  
+c.updateLocalStorage = function(){
+  v.nameInput.focus()
   if(localStorage){
     setTimeout(function(){
       let modelAsString=''
